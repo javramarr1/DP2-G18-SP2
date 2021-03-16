@@ -21,6 +21,7 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Fernando" action="https://www.xataka.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Mariano" action="https://www.elmundodelgato.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Francisco" action="https://www.realmadrid.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Juanma" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Miguel" action="https://www.wikipedia.org/"/>
@@ -38,15 +39,17 @@
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.provider.favourite-link-Fernando" action="https://www.xataka.com/"/>
+			<acme:menu-suboption code="master.menu.provider.favourite-link-Mariano" action="https://www.elmundodelgato.com/"/>
 			<acme:menu-suboption code="master.menu.provider.favourite-link-Francisco" action="https://www.realmadrid.com/"/>
-
 			<acme:menu-suboption code="master.menu.provider.favourite-link-Juanma" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Miguel" action="https://www.wikipedia.org/"/>
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link-Fernando" action="https://www.xataka.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.favourite-link-Mariano" action="https://www.elmundodelgato.com/"/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link-Fernando" action="hhttps://www.realmadrid.com/"/>
 			<acme:menu-suboption code="master.menu.consumer.favourite-link-Juanma" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Miguel" action="https://www.wikipedia.org/"/>
