@@ -12,7 +12,7 @@
 
 master.banner.background = #FFE97F 
 
-﻿# master.welcome ##############################################################
+# master.welcome ##############################################################
 
 master.welcome.title = ¡Bienvenidos!
 master.welcome.text = \
@@ -31,6 +31,9 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.favourite-link-Fernando = Enlace favorito Fernando
 master.menu.anonymous.favourite-link-Mariano = Enlace favorito Mariano
+master.menu.anonymous.favourite-link-Francisco = Enlace favorito Francisco
+master.menu.anonymous.favourite-link-Juanma = Enlace favorito Juanma
+
 
 # master.menu.administrator ###################################################
 
@@ -47,6 +50,9 @@ master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
 master.menu.provider.favourite-link-Fernando = Enlace favorito Fernando
 master.menu.provider.favourite-link-Mariano = Enlace favorito Mariano
+master.menu.provider.favourite-link-Francisco = Enlace favorito Francisco
+master.menu.provider.favourite-link-Juanma = Enlace favorito Juanma
+
 
 # master.menu.consumer ##########################################################
 
@@ -54,6 +60,9 @@ master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 master.menu.consumer.favourite-link-Fernando = Enlace favorito Fernando
 master.menu.consumer.favourite-link-Mariano = Enlace favorito Mariano
+master.menu.consumer.favourite-link-Francisco = Enlace favorito Francisco
+master.menu.consumer.favourite-link-Juanma = Enlace favorito Juanma
+
 
 # master.menu.user-account ####################################################
 
@@ -64,7 +73,7 @@ master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 
-﻿# master.footer ###############################################################
+# master.footer ###############################################################
 
 master.footer.title.about = Nosotros
 master.footer.label.company = La empresa
