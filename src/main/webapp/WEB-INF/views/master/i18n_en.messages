@@ -34,6 +34,7 @@ master.menu.anonymous.favourite-link-Mariano = Mariano´s favourite link
 master.menu.anonymous.favourite-link-Francisco = Francisco´s favourite link
 master.menu.anonymous.favourite-link-Juanma = Juanma´s favourite link
 master.menu.anonymous.favourite-link-Miguel = Miguel´s favourite link
+master.menu.anonymous.favourite-link-Javier = Javier´s favourite link
 
 
 # master.menu.administrator ###################################################
@@ -54,7 +55,7 @@ master.menu.provider.favourite-link-Mariano = Mariano´s favourite link
 master.menu.provider.favourite-link-Francisco = Francisco´s favourite link
 master.menu.provider.favourite-link-Juanma = Juanma´s favourite link
 master.menu.provider.favourite-link-Miguel = Miguel´s favourite link
-
+master.menu.provider.favourite-link-Javier = Javier´s favourite link
 
 # master.menu.consumer ##########################################################
 
@@ -65,6 +66,7 @@ master.menu.consumer.favourite-link-Mariano = Mariano´s favourite link
 master.menu.consumer.favourite-link-Francisco = Francisco´s favourite link
 master.menu.consumer.favourite-link-Juanma = Juanma´s favourite link
 master.menu.consumer.favourite-link-Miguel = Miguel´s favourite link
+master.menu.consumer.favourite-link-Javier = Javier´s favourite link
 
 # master.menu.user-account ####################################################
 
