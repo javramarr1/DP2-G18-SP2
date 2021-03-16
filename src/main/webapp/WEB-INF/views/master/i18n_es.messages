@@ -34,6 +34,7 @@ master.menu.anonymous.favourite-link-Mariano = Enlace favorito Mariano
 master.menu.anonymous.favourite-link-Francisco = Enlace favorito Francisco
 master.menu.anonymous.favourite-link-Juanma = Enlace favorito Juanma
 master.menu.anonymous.favourite-link-Miguel = Enlace favorito Miguel
+master.menu.anonymous.favourite-link-Javier = Enlace favorito Javier
 
 # master.menu.administrator ###################################################
 
@@ -53,6 +54,7 @@ master.menu.provider.favourite-link-Mariano = Enlace favorito Mariano
 master.menu.provider.favourite-link-Francisco = Enlace favorito Francisco
 master.menu.provider.favourite-link-Juanma = Enlace favorito Juanma
 master.menu.provider.favourite-link-Miguel = Enlace favorito Miguel
+master.menu.provider.favourite-link-Javier = Enlace favorito Javier
 
 
 # master.menu.consumer ##########################################################
@@ -64,6 +66,7 @@ master.menu.consumer.favourite-link-Mariano = Enlace favorito Mariano
 master.menu.consumer.favourite-link-Francisco = Enlace favorito Francisco
 master.menu.consumer.favourite-link-Juanma = Enlace favorito Juanma
 master.menu.consumer.favourite-link-Miguel = Enlace favorito Miguel
+master.menu.consumer.favourite-link-Javier = Enlace favorito Javier
 
 # master.menu.user-account ####################################################
 

@@ -25,6 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Francisco" action="https://www.realmadrid.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Juanma" action="https://www.reddit.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Miguel" action="https://www.wikipedia.org/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-Javier" action="https://github.com/"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
