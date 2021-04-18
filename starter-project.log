@@ -313,3 +313,21 @@ WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebSer
 ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [info] in table [task]
 at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421): [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [info] in table [task]
 at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:136): Schema-validation: missing column [info] in table [task]
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.hibernate.validator.internal.constraintvalidators.hv.ScriptAssertContext.evaluateScriptAssertExpression(ScriptAssertContext.java:52): HV000023: Error during execution of script "_this.start_date.compare(_this.end_date) == -1;" occurred.
+org.hibernate.validator.spi.scripting.ScriptEngineScriptEvaluator.doEvaluate(ScriptEngineScriptEvaluator.java:70): HV000233: An error occurred while executing the script: "_this.start_date.compare(_this.end_date) == -1;".
+jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470): TypeError: _this.start_date.compare is not a function in <eval> at line number 1
+jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57): TypeError: _this.start_date.compare is not a function
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.hibernate.validator.internal.constraintvalidators.hv.ScriptAssertContext.evaluateScriptAssertExpression(ScriptAssertContext.java:52): HV000023: Error during execution of script "_this.okDates() == true;" occurred.
+org.hibernate.validator.spi.scripting.ScriptEngineScriptEvaluator.doEvaluate(ScriptEngineScriptEvaluator.java:70): HV000233: An error occurred while executing the script: "_this.okDates() == true;".
+jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470): TypeError: _this.okDates is not a function in <eval> at line number 1
+jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57): TypeError: _this.okDates is not a function
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.hibernate.validator.internal.constraintvalidators.hv.ScriptAssertContext.evaluateScriptAssertExpression(ScriptAssertContext.java:52): HV000023: Error during execution of script "_this.okDates() == false;" occurred.
+org.hibernate.validator.spi.scripting.ScriptEngineScriptEvaluator.doEvaluate(ScriptEngineScriptEvaluator.java:70): HV000233: An error occurred while executing the script: "_this.okDates() == false;".
+jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470): TypeError: _this.okDates is not a function in <eval> at line number 1
+jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57): TypeError: _this.okDates is not a function
