@@ -1,9 +1,6 @@
 package acme.features.anonymous.tasks;
 
 
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,16 +46,12 @@ public class AnonymousTaskCreateService implements AbstractCreateService<Anonymo
 	@Override
 	public Task instantiate(final Request<Task> request) {
 		assert request != null;
-	
-	
 		
 		Task result;
 
 		result = new Task();
 		result.setTitle("Pruebas unitarias");
 		result.setDescription("Crear pruebas unitarias para el TokenService usando mockito");
-		result.setEnd_date(LocalDateTime.parse("2021-06-13 00:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
-		result.setEnd_date(LocalDateTime.parse("2021-06-13 00:00", DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm")));
 		result.setIs_private(false);
 		result.setWorkload("04 33/60");
 		result.setOp_link("www.google.es");
