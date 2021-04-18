@@ -12,8 +12,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.URL;
-
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -52,7 +50,6 @@ public class Task extends DomainEntity{
 		@NotNull
 		protected Boolean is_private;
 		
-		@URL
 		protected String op_link;
 		
 		@NotBlank
