@@ -202,6 +202,10 @@ INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU w
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 4.32 seconds (JVM running for 4.745)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 3516 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 12.512 seconds (JVM running for 13.466)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
 INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
@@ -242,6 +246,10 @@ INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 12720 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 4.406 seconds (JVM running for 4.849)
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 19208 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 9.763 seconds (JVM running for 10.515)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -331,3 +339,14 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.hibe
 org.hibernate.validator.spi.scripting.ScriptEngineScriptEvaluator.doEvaluate(ScriptEngineScriptEvaluator.java:70): HV000233: An error occurred while executing the script: "_this.okDates() == false;".
 jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470): TypeError: _this.okDates is not a function in <eval> at line number 1
 jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57): TypeError: _this.okDates is not a function
+=======
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+ERROR [org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] ***************************
+APPLICATION FAILED TO START
+***************************
+Description:
+Web server failed to start. Port 8080 was already in use.
+Action:
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
