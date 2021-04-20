@@ -1,5 +1,6 @@
 package acme.features.anonymous.shout;
 
+import java.util.Calendar;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,8 +44,12 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		assert request != null;
 
 		Collection<Shout> result;
+		Calendar  calendar;
+		calendar=Calendar.getInstance();   //get the Calendar
+		calendar.add(Calendar.MONTH, -1);  //subtract one month
+		
 
-		result = this.repository.findMany();
+		result = this.repository.findLessThanAMonth(calendar.getTime());
 
 		return result;
 	}

@@ -29,19 +29,26 @@
 	</bean>
 
 	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2018/01/09 12:55"/>
-		<property name="author" value="Fran"/>
+		<property name="moment" value="2021/01/09 12:55"/>
+		<property name="author" value="Francisco"/>
 		<property name="text" value="I'm sad!"/>
 		<property name="info" value="http://www.realmadrid.com"/>
 	</bean>
 
 	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2020/05/07 01:30"/>
-		<property name="author" value="Javi"/>
+		<property name="moment" value="2021/03/27 01:30"/>
+		<property name="author" value="Javier"/>
 		<property name="text" value="I love github!"/>
 		<property name="info" value="http://Github.com"/>
 	</bean>
 	
+
+	<bean id="shout04" class="acme.entities.shouts.Shout">
+		<property name="moment" value="2021/04/20 01:30"/>
+		<property name="author" value="Misco"/>
+		<property name="text" value="I dont know"/>
+		<property name="info"><null/></property>
+
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="start_date" value="2021/09/07 00:00"/>
 		<property name="end_date" value="2021/09/08 12:00"/>
@@ -50,6 +57,7 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
+
 	</bean>
 
 </beans>
