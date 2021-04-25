@@ -5,18 +5,19 @@
 
 
 <acme:form>
-	<acme:form-textbox code="authenticated.task.form.label.title" path="title"/>
-	<acme:form-textarea code="authenticated.task.form.label.description" path="description"/>
-	<acme:form-moment code="authenticated.task.form.label.start_date" path="start_date"/>
-	<acme:form-moment code="authenticated.task.form.label.end_date" path="end_date"/>
-	<acme:form-textbox code="authenticated.task.form.label.workload" path="workload"/>
-	<acme:form-textbox code="authenticated.task.form.label.op_url" path="op_url"/>
-	<acme:form-select code="authenticated.task.form.label.is_private" path="is_private">
+	<acme:form-textbox code="manager.task.form.label.title" path="title"/>
+	<acme:form-textarea code="manager.task.form.label.description" path="description"/>
+	<acme:form-moment code="manager.task.form.label.start_date" path="start_date"/>
+	<acme:form-moment code="manager.task.form.label.end_date" path="end_date"/>
+	<acme:form-textbox code="manager.task.form.label.workload" path="workload"/>
+	<acme:form-textbox code="manager.task.form.label.op_url" path="op_url"/>
+	<acme:form-select code="manager.task.form.label.is_private" path="is_private">
 		<acme:form-option code="YES" value="true" selected="${is_private == true}"/>
 		<acme:form-option code="NO" value="false" selected="${is_private == false}"/>
 	</acme:form-select>
 	
-	<acme:form-submit code="authenticated.task.form.button.create" action="/authenticated/manager/task/create"/>
-  	<acme:form-return code="authenticated.task.form.button.return"/>
+
+	<acme:form-submit test="${command == 'create'}" code="manager.task.form.button.create" action="/manager/task/create"/>
+  	<acme:form-return code="manager.task.form.button.return"/>
 
 </acme:form>

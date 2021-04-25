@@ -22,10 +22,12 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.shout" action="/anonymous/shout/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.shoutcreate" action="/anonymous/shout/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.tasklist" action="/anonymous/task/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.authenticated.taskcreate" action="/authenticated/manager/task/create"/>
+			<acme:menu-suboption code="master.menu.authenticated.taskcreate" action="/manager/task/create"/>
+			<acme:menu-suboption code="master.menu.authenticated.list" action="/manager/task/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
