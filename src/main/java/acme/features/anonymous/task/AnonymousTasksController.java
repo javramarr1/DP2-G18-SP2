@@ -1,4 +1,4 @@
-package acme.features.anonymous.tasks;
+package acme.features.anonymous.task;
 
 import javax.annotation.PostConstruct;
 

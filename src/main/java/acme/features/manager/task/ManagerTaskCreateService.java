@@ -1,4 +1,4 @@
-package acme.features.anonymous.tasks;
+package acme.features.manager.task;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,14 +8,14 @@ import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Manager;
 import acme.framework.services.AbstractCreateService;
 
 @Service
-public class AnonymousTaskCreateService implements AbstractCreateService<Anonymous, Task>{
+public class ManagerTaskCreateService implements AbstractCreateService<Manager, Task>{
 
 	@Autowired
-	protected AnonymousTaskRepository repository;
+	protected ManagerTaskRepository repository;
 	
 	
 	@Override
