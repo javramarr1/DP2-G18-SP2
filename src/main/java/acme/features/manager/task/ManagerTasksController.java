@@ -1,4 +1,4 @@
-package acme.features.anonymous.tasks;
+package acme.features.manager.task;
 
 import javax.annotation.PostConstruct;
 
@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import acme.entities.tasks.Task;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Manager;
 
 @Controller
-@RequestMapping("/anonymous/task")
-public class AnonymousTasksController extends AbstractController<Anonymous, Task>{
+@RequestMapping("/manager/task")
+public class ManagerTasksController extends AbstractController<Manager, Task>{
 	
 		@Autowired
-		protected AnonymousTaskCreateService createService;
+		protected ManagerTaskCreateService createService;
 		
 		@PostConstruct
 		protected void initialise() {
