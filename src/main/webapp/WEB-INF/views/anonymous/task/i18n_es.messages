@@ -1,0 +1,17 @@
+# i18n_es.messages
+
+anonymous.task.form.label.title = Titulo:
+anonymous.task.form.label.description = Descripcion:
+anonymous.task.form.label.start_date= Fecha inicio
+anonymous.task.form.label.end_date = Fecha final
+anonymous.task.form.label.workload = WorkLoad
+anonymous.task.form.label.op_url = URL
+anonymous.task.form.label.is_private = Privacidad
+anonymous.task.form.button.create= Crear
+anonymous.task.form.button.return= Volver
+
+ 
+anonymous.task.list.label.title=Titulo
+anonymous.task.list.label.start_date= Fecha inicio
+anonymous.task.list.label.end_date= Fecha final
+anonymous.task.list.label.workload=WorkLoad
