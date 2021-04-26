@@ -1,6 +1,9 @@
 package acme.features.anonymous.shout;
 
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,11 +45,23 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
 
-		Collection<Shout> result;
 
-		result = this.repository.findMany();
+		final List<Shout> list = new ArrayList<Shout>();
+		
 
-		return result;
+		Calendar  calendar;
+		calendar=Calendar.getInstance();   //get the Calendar
+		calendar.add(Calendar.MONTH, -1);  //subtract one month
+		
+		for(final Shout shout : this.repository.findMany()) {
+			if(shout.getMoment().after(calendar.getTime())) {
+				list.add(shout);
+			}
+					
+			
+		}
+		
+		return list;
 	}
 
 }
