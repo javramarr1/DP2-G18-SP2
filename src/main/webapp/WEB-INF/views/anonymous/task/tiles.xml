@@ -6,4 +6,5 @@
 	<definition name="anonymous/task/form" extends="master">
 		<put-attribute name="body" type="template" value="../anonymous/task/form.jsp" />
 	</definition>
+	
 </tiles-definitions>
