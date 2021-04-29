@@ -260,3 +260,11 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Plan
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 404
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 404
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 8632 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 14160 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 10688 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 21540 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator

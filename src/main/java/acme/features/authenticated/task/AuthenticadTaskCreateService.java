@@ -50,11 +50,6 @@ public class AuthenticadTaskCreateService implements AbstractCreateService<Authe
 		Task result;
 
 		result = new Task();
-		result.setTitle("Pruebas unitarias");
-		result.setDescription("Crear pruebas unitarias para el TokenService usando mockito");
-		result.setIs_private(false);
-		result.setWorkload("04 33/60");
-		result.setOp_link("www.google.es");
 		
 		return result;
 	}
