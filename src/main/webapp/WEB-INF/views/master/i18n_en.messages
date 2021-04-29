@@ -39,9 +39,7 @@ master.menu.anonymous.taskcreate= Create Task
 master.menu.manager = Manager
 master.menu.manager.createTask = Create task
 master.menu.manager.listTask = List tasks
-master.menu.manager.favourite-link = Favourite link
 master.menu.manager.showTask = Show Task
-master.menu.anonymous.tasklist=List task
 
 # master.menu.administrator ###################################################
 

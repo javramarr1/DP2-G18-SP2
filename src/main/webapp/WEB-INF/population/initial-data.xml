@@ -97,12 +97,14 @@
 	</bean>
 
 	<bean name="managerManager" class="acme.entities.roles.Manager">
+				<property name="company" value="us"/>
+  				<property name="sector" value="tic"/>
 
 		<property name="userAccount" ref="managerUserAccount" />
 	</bean>
 	
 	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
-	<property name="company" value="us"/>
+				<property name="company" value="us"/>
   				<property name="sector" value="tic"/>
 		<property name="userAccount" ref="managerUserAccount" />
 	</bean>

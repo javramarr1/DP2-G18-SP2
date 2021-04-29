@@ -25,10 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.tasklist" action="/anonymous/task/list"/>
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
-			<acme:menu-suboption code="master.menu.authenticated.taskcreate" action="/manager/task/create"/>
-			<acme:menu-suboption code="master.menu.authenticated.list" action="/manager/task/list"/>
-		</acme:menu-option>
+		
 		
 		
 		<acme:menu-option code="master.menu.manager" access="hasRole('Manager')">
