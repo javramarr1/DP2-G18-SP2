@@ -48,8 +48,9 @@
 		<property name="author" value="Misco"/>
 		<property name="text" value="I dont know"/>
 		<property name="info"><null/></property>
-		
-		</bean>
+
+	</bean>
+
 
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="start_date" value="2021/09/07 00:00"/>
@@ -59,7 +60,16 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-
+	</bean>
+	
+	<bean id="task02" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2020/09/07 00:00"/>
+		<property name="end_date" value="2020/09/08 12:00"/>
+		<property name="workload" value="20 32/60"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="true"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
 	</bean>
 
 </beans>

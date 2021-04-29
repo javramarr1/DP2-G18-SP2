@@ -1,4 +1,4 @@
-package acme.features.authenticated.task;
+package acme.features.anonymous.task;
 
 import java.util.Collection;
 import java.util.Date;
@@ -10,12 +10,12 @@ import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AuthenticatedTaskRepository extends AbstractRepository{
-
+public interface AnonymousTaskRepository extends AbstractRepository{
+	
 	@Query("select t from Task t where t.end_date >= ?1 order by t.workload ")
 	Collection<Task> findNonFinishedTask(Date end);
 	
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskById(int id);
-
+	
 }

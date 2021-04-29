@@ -16,7 +16,8 @@
 		<acme:form-option code="NO" value="false" selected="${is_private == false}"/>
 	</acme:form-select>
 	
-	<acme:form-submit code="anonymous.task.form.button.create" action="/anonymous/task/create"/>
+	
+	<acme:form-submit test="${command == 'create'}" code="anonymous.task.form.button.create" action="/anonymous/task/create"/>
   	<acme:form-return code="anonymous.task.form.button.return"/>
 
 </acme:form>

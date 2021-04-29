@@ -32,6 +32,7 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.shout = Lista-Gritos
 master.menu.anonymous.shoutcreate=Grito!
+<<<<<<< HEAD
 master.menu.anonymous.taskcreate= Crear Tarea
 
 # master.menu.manager ##########################################################
@@ -40,6 +41,9 @@ master.menu.manager = Manager
 master.menu.manager.createTask = Crear tareas
 master.menu.manager.listTask = Lista de tareas
 master.menu.manager.showTask =Mostrar tarea
+=======
+master.menu.anonymous.tasklist=Lista tareas
+>>>>>>> branch 'frarodele' of https://github.com/Juanmagc99/DP2-G18-SP2.git
 
 # master.menu.administrator ###################################################
 
