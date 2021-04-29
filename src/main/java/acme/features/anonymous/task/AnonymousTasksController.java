@@ -1,4 +1,4 @@
-package acme.features.anonymous.tasks;
+package acme.features.anonymous.task;
 
 import javax.annotation.PostConstruct;
 
@@ -18,8 +18,16 @@ public class AnonymousTasksController extends AbstractController<Anonymous, Task
 		@Autowired
 		protected AnonymousTaskCreateService createService;
 		
+		@Autowired
+		protected AnonymousTaskListService	listService;
+		
+		@Autowired
+		protected AnonymousTaskShowService	showService;
+		
 		@PostConstruct
 		protected void initialise() {
+			super.addBasicCommand(BasicCommand.LIST, this.listService);
 			super.addBasicCommand(BasicCommand.CREATE, this.createService);
+			super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		}
 }
