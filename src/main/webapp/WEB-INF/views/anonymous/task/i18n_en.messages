@@ -1,0 +1,12 @@
+# i18n_en.messages
+
+anonymous.task.form.label.title = Title:
+anonymous.task.form.label.description = Description:
+anonymous.task.form.label.start_date = Start Date:
+anonymous.task.form.label.end_date = End Date:
+anonymous.task.form.label.workload = WorkLoad:
+anonymous.task.form.label.is_private = Private:
+anonymous.task.form.label.op_url = URL:
+
+anonymous.task.form.button.create = Save
+anonymous.task.form.button.return = Return
