@@ -39,7 +39,7 @@ master.menu.anonymous.tasklist=Lista de Tareas
 master.menu.manager = Manager
 master.menu.manager.createTask = Crear tareas
 master.menu.manager.listTask = Lista de tareas
-master.menu.manager.showTask =Mostrar tarea
+
 
 
 
