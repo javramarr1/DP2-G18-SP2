@@ -32,7 +32,6 @@
 		
 			<acme:menu-suboption code="master.menu.manager.createTask" action="/manager/task/create"/>
 			<acme:menu-suboption code="master.menu.manager.listTask" action="/manager/task/list"/>
-			<acme:menu-suboption code="master.menu.manager.showTask" action="/manager/task/show"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
