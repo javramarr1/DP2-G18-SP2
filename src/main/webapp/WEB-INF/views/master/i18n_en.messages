@@ -38,7 +38,7 @@ master.menu.anonymous.tasklist=List of Tasks
 master.menu.manager = Manager
 master.menu.manager.createTask = Create task
 master.menu.manager.listTask = List tasks
-master.menu.manager.showTask = Show Task
+
 
 # master.menu.administrator ###################################################
 
