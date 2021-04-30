@@ -48,7 +48,9 @@
 		<property name="author" value="Misco"/>
 		<property name="text" value="I dont know"/>
 		<property name="info"><null/></property>
+
 	</bean>
+
 
 	<bean id="task01" class="acme.entities.tasks.Task">
 		<property name="start_date" value="2021/09/07 00:00"/>
