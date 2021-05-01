@@ -45,8 +45,8 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
 		result = this.repository.findOneTaskById(id);
 		
 		final Date current = Calendar.getInstance().getTime();
-		assert result.getEnd_date().after(current); //List the public tasks that are non-finished
-		//assert !result.getIs_private();
+		assert result.getEnd_date().after(current); 
+
 		return result;
 	}
 

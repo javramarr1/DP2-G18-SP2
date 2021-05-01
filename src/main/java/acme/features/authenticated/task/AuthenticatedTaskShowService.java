@@ -44,8 +44,8 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
 		result = this.repository.findOneTaskById(id);
 		
 		final Date current = Calendar.getInstance().getTime();
-		assert result.getEnd_date().before(current);//List the public tasks that are finished
-		//assert !result.getIs_private();
+		assert result.getEnd_date().before(current);
+
 		return result;
 	}
 
