@@ -10,6 +10,7 @@ import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -44,12 +45,18 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			assert request != null;
 
 			final Collection<Task> result;
+			Principal principal;
+			principal = request.getPrincipal();
+
 			Calendar  calendar;
 			calendar=Calendar.getInstance();   //get the Calendar
 			
+			System.out.println(principal.getAccountId());
+			
 
+			//result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getAccountId());
 			result = this.repository.findNonFinishedTask(calendar.getTime());
-
+			
 			return result;
 		}
 

@@ -48,8 +48,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		
 		Task result;
+		Manager manager;
 
+		manager = this.repository.findOneManagerById(request.getPrincipal().getActiveRoleId());
 		result = new Task();
+		result.setManager(manager);
 		result.setTitle(null);
 		result.setDescription(null);
 		result.setIs_private(null);
