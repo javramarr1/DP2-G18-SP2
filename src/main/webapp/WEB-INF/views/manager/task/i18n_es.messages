@@ -1,14 +1,23 @@
 # i18n_es.messages
 
 manager.task.form.label.title = Titulo
-manager.task.form.label.startMoment = Fecha Inicial
-manager.task.form.label.endMoment = Fecha Final
+manager.task.form.label.startMoment = Momento inicial
+manager.task.form.label.endMoment = Momento final
 manager.task.form.label.workload = Carga de trabajo
 manager.task.form.label.status = Estado
 manager.task.form.label.description = Descripcion
 manager.task.form.label.link = Enlace
 manager.task.form.button.create = Crear tarea
 manager.task.form.button.return = Volver
+manager.task.form.label.start_date = Fecha inicio
+manager.task.form.label.end_date = Fecha final
+manager.task.form.label.op_url = Enlace
+manager.task.form.label.is_private = Privado
+
+manager.task.list.label.title=Titulo
+manager.task.list.label.start_date= Fecha inicio
+manager.task.list.label.end_date= Fecha final
+manager.task.list.label.workload=Acumulacion de Trabajo
 
 anonymous.task.list.label.title=Titulo
 anonymous.task.list.label.start_date= Fecha inicio

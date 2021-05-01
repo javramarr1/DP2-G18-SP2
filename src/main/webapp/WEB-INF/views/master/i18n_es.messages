@@ -32,14 +32,14 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.shout = Lista-Gritos
 master.menu.anonymous.shoutcreate=Grito!
-master.menu.anonymous.taskcreate= Crear Tarea
+master.menu.anonymous.tasklist=Lista de Tareas
 
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
 master.menu.manager.createTask = Crear tareas
 master.menu.manager.listTask = Lista de tareas
-master.menu.manager.showTask =Mostrar tarea
+
 
 
 

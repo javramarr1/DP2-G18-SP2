@@ -12,10 +12,11 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedTaskRepository extends AbstractRepository{
 
-	@Query("select t from Task t where t.end_date >= ?1 order by t.workload ")
-	Collection<Task> findNonFinishedTask(Date end);
-	
+
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskById(int id);
+
+	@Query("select t from Task t where t.end_date < ?1 order by t.workload ")
+	Collection<Task> findFinishedTask(Date time);
 
 }

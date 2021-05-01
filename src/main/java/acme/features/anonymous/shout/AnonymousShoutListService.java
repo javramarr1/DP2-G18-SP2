@@ -38,7 +38,7 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "moment");
+		request.unbind(entity, model, "author", "text", "moment","info");
 	}
 
 	@Override
@@ -50,8 +50,8 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 		
 
 		Calendar  calendar;
-		calendar=Calendar.getInstance();   //get the Calendar
-		calendar.add(Calendar.MONTH, -1);  //subtract one month
+		calendar=Calendar.getInstance();   
+		calendar.add(Calendar.MONTH, -1);  
 		
 		for(final Shout shout : this.repository.findMany()) {
 			if(shout.getMoment().after(calendar.getTime())) {
