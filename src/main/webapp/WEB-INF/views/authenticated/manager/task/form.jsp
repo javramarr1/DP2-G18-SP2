@@ -9,14 +9,13 @@
 	<acme:form-textarea code="manager.task.form.label.description" path="description"/>
 	<acme:form-moment code="manager.task.form.label.start_date" path="start_date"/>
 	<acme:form-moment code="manager.task.form.label.end_date" path="end_date"/>
-	<acme:form-textbox code="manager.task.form.label.workload" path="workload"/>
+	<acme:form-double code="manager.task.form.label.workload" path="workload"/>
 	<acme:form-textbox code="manager.task.form.label.op_url" path="op_url"/>
-	<acme:form-select code="manager.task.form.label.is_private" path="is_private">
-		<acme:form-option code="YES" value="true" selected="${is_private == true}"/>
-		<acme:form-option code="NO" value="false" selected="${is_private == false}"/>
-	</acme:form-select>
 	
-
+	<jstl:if test="${!readonly}">
+		<acme:form-checkbox code="manager.task.form.label.is_private" path="is_private"/>
+	</jstl:if>
+	
 	<acme:form-submit test="${command == 'create'}" code="manager.task.form.button.create" action="/manager/task/create"/>
   	<acme:form-return code="manager.task.form.button.return"/>
 
