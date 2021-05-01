@@ -1,0 +1,12 @@
+# i18n_en.messages
+
+authenticated.task.form.label.title = Title:
+authenticated.task.form.label.description = Description:
+authenticated.task.form.label.start_date = Start date:
+authenticated.task.form.label.end_date = End date:
+authenticated.task.form.label.workload = Workload(Format(x=hour,y=min)= xx yy/60):
+authenticated.task.form.label.is_private = Private:
+authenticated.task.form.label.op_url = Link:
+
+authenticated.task.form.button.create = Save
+authenticated.task.form.button.return = Return
