@@ -8,4 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Rafael Corchuelo (corchu@us.es)
+
+-Francisco Javier Rodriguez Elena (frarodele@alum.us.es)
+-Javier Ramos Arrondo
+-Juamna Garcia
+-Miguel Molina Rubio
+-Mariano
+-Fernando Miguel Hidalgo
