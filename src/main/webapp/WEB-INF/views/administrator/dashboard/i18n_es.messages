@@ -17,6 +17,6 @@ administrator.dashboard.form.label.num-public-task =  Número total de tareas p�
 administrator.dashboard.form.label.num-finished-task = Número total de tareas finalizadas
 administrator.dashboard.form.label.num-current-task = Número total de tareas pendientes
 administrator.dashboard.form.label.num-executions = Media, desviación, mínimo y máximo de tares en ejecución
-administrator.dashboard.form.label.num-workloads = Media, desviación, mínimo y máximo de tares en ejecuciónde carga de trabajo
+administrator.dashboard.form.label.num-workloads = Media, desviación, mínimo y máximo de tares en ejecución de carga de trabajo
 
 
