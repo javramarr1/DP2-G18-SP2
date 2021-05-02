@@ -60,7 +60,7 @@
 			<acme:message code="administrator.dashboard.form.label.num-executions"/>
 		</th>
 		<td>
-			<acme:print value="${numExecutions}"/>
+			<acme:print value="${numExecutions}"/> <acme:message code="administrator.dashboard.form.label.dias"/>
 		</td>
 	</tr>	
 	<tr>
