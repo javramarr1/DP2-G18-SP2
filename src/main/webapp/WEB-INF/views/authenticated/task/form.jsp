@@ -9,7 +9,7 @@
 	<acme:form-textarea code="authenticated.task.form.label.description" path="description"/>
 	<acme:form-moment code="authenticated.task.form.label.start_date" path="start_date"/>
 	<acme:form-moment code="authenticated.task.form.label.end_date" path="end_date"/>
-	<acme:form-textbox code="authenticated.task.form.label.workload" path="workload"/>
+	<acme:form-double code="authenticated.task.form.label.workload" path="workload"/>
 	<acme:form-textbox code="authenticated.task.form.label.op_url" path="op_url"/>
 	<acme:form-select code="authenticated.task.form.label.is_private" path="is_private">
 		<acme:form-option code="YES" value="true" selected="${is_private == true}"/>

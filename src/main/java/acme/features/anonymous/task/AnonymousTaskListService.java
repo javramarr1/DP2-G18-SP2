@@ -48,7 +48,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 			calendar=Calendar.getInstance();   //get the Calendar
 			
 
-			result = this.repository.findNonFinishedTask(calendar.getTime());
+			result = this.repository.findNonFinishedTaskAndPublic(calendar.getTime());
 
 			return result;
 		}

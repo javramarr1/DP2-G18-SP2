@@ -21,25 +21,22 @@ import acme.framework.repositories.AbstractRepository;
 public interface AdministratorDashboardRepository extends AbstractRepository {
 
 	@Query("select COUNT(t) from Task t where t.is_private=TRUE")
-	Double numPrivateTask();
+	Integer numPrivateTask();
 	
 	@Query("select COUNT(t) from Task t where t.is_private=FALSE")
-	Double numPublicTask();
+	Integer numPublicTask();
+	
+	@Query("select COUNT(t) from Task t where t.end_date<=CURDATE()")
+	Integer numFinishedTask();
 	
 	@Query("select COUNT(t) from Task t where t.end_date>CURDATE()")
-	Double numFinishedTask();
-	
-	@Query("select COUNT(t) from Task t where t.end_date<CURDATE()")
-	Double numCurrentTask();
-	
-//	@Query("select AVG((datediff(dd, t.end_date, t.start_date))), stddev((datediff(dd, t.end_date, t.start_date))), min((datediff(dd, t.end_date, t.start_date))), max((datediff(dd, t.end_date, t.start_date))) from Task t")
-//	String numExecutions();
-	
-	@Query("select avg(datediff(t.end_date, t.start_date)), stddev(datediff(t.end_date, t.start_date)), min(datediff(t.end_date, t.start_date)), max(datediff(t.end_date, t.start_date)) from Task t")
+	Integer numCurrentTask();
+
+	@Query("select round(avg(datediff(t.end_date, t.start_date)),2), round(stddev(datediff(t.end_date, t.start_date)),2), round(min(datediff(t.end_date, t.start_date)),2), round(max(datediff(t.end_date, t.start_date)),2) from Task t")
 	String numExecutions();
 	
 	
-	@Query("select avg(t.workload), stddev(t.workload), min(t.workload), max(t.workload) from Task t")
+	@Query("select round(avg(t.workload),2), round(stddev(t.workload),2), round(min(t.workload),2), round(max(t.workload),2) from Task t")
 	String numWorkloads();
 
 }

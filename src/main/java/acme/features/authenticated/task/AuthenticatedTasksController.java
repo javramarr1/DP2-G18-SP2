@@ -14,7 +14,7 @@ import acme.framework.entities.Authenticated;
 @Controller
 @RequestMapping("/authenticated/task")
 public class AuthenticatedTasksController extends AbstractController<Authenticated, Task>{
-		
+
 		@Autowired
 		protected AuthenticatedTaskShowService	showService;
 		

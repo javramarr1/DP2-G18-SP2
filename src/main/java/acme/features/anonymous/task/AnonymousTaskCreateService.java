@@ -53,7 +53,7 @@ public class AnonymousTaskCreateService implements AbstractCreateService<Anonymo
 		result.setTitle("Pruebas unitarias");
 		result.setDescription("Crear pruebas unitarias para el TokenService usando mockito");
 		result.setIs_private(false);
-		result.setWorkload("04 33/60");
+		result.setWorkload(null);
 		result.setOp_link("www.google.es");
 		
 		return result;

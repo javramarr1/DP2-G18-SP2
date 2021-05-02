@@ -72,7 +72,6 @@ master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.become-manager= Hazte manager
-master.menu.user-account.manager= Datos del manager
 
 ﻿# master.footer ###############################################################
 
@@ -91,7 +90,7 @@ master.footer.label.spanish = Español
 master.company.title = La compañía
 master.company.text = \
 	Acme Planner, Inc. es una compañía fictícia que proporciona un proyecto \
-	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
+	 de la asignatura Diseño y Pruebas, en el Grado \
 	en Ingeniería del Software de la Universidad de Sevilla.
 master.company.name =Acme Planner, Inc.
 master.company.address = Calle, número, Ciudad, Estado, País
