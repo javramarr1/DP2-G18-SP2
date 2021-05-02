@@ -4,14 +4,17 @@ import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import acme.entities.roles.Manager;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +29,11 @@ public class Task extends DomainEntity{
 		protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-
+		@NotNull
+		@Valid
+		@ManyToOne(optional = false)
+		protected Manager manager;
+		
 		@NotBlank
 		@Size(min= 1, max = 80)
 		protected String title;

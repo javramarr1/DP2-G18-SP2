@@ -629,9 +629,6 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout02 = acme.en
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.entities.shouts.Shout{id=11, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=12, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task01 = acme.entities.tasks.Task{id=13, version=0}
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 1840 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 6.307 seconds (JVM running for 7.146)
 INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -663,9 +660,6 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccoun
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 9660 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 4.962 seconds (JVM running for 5.402)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -704,21 +698,6 @@ INFO [acme.framework.utilities.DatabasePopulator] Validating shout03 ... PASS
 INFO [acme.framework.utilities.DatabasePopulator] Validating shout04 ... PASS
 INFO [acme.framework.utilities.DatabasePopulator] Validating task01 ... PASS
 INFO [acme.framework.utilities.DatabasePopulator] Validating task02 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task03 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task04 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task05 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task06 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam01 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam02 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam03 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam04 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam05 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam06 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam07 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam08 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam09 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating spam10 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating threshold ... PASS
 INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
 INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for shout01.
 INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for shout02.
@@ -726,21 +705,6 @@ INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for shout03.
 INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for shout04.
 INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for task01.
 INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for task02.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for task03.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for task04.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 8 for task05.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 9 for task06.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 10 for spam01.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 11 for spam02.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 12 for spam03.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 13 for spam04.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 14 for spam05.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 15 for spam06.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 16 for spam07.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 17 for spam08.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 18 for spam09.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 19 for spam10.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 20 for threshold.
 INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout01 = acme.entities.shouts.Shout{id=9, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout02 = acme.entities.shouts.Shout{id=10, version=0}
@@ -748,6 +712,67 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.en
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=12, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task01 = acme.entities.tasks.Task{id=13, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task02 = acme.entities.tasks.Task{id=14, version=0}
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-MIGUEL with PID 9436 (C:\Users\Admin\git\DP2-G18-SP2\target\classes started by Admin in C:\Users\Admin\git\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 121.611 seconds (JVM running for 148.556)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerManager ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for managerUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for managerManager.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for managerAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccount = acme.framework.entities.UserAccount{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Acceso no autorizado
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task03 = acme.entities.tasks.Task{id=15, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task04 = acme.entities.tasks.Task{id=16, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task05 = acme.entities.tasks.Task{id=17, version=0}

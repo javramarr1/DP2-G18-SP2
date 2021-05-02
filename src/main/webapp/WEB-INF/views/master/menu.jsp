@@ -42,6 +42,9 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.dashboard" action="/administrator/dashboard/show"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.spam.create" action="/administrator/spam/create"/>
+			<acme:menu-suboption code="master.menu.administrator.spam.list" action="/administrator/spam/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 
