@@ -50,16 +50,56 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"numFinishedTask", "numCurrentTask", //
 			"numExecutions", "numWorkloads");
 	}
+	
+	public String parsenumExecutions(final String s) {
+		String res = "";
+		final String[] trozo =s.split(",");
+		for (int i = 0; i < trozo.length; i++) {
+			final String parte = trozo[i];
+			
+			if (i == trozo.length-1) {
+				res += parte + " días. ";
+				
+			}else {
+				res += parte + " días, ";
+			}
+			
+			
+		}
+		
+		return res;
+	}
+	
+	public String parseWorkload(final String s) {
+		String res = "";
+		final String[] trozo =s.split(",");
+		for (int i = 0; i < trozo.length; i++) {
+			final String parte = trozo[i];
+			final int indexOfDecimal = parte.indexOf(".");
+			final long horas = Long.valueOf(parte.substring(0, indexOfDecimal));
+			final long minutos = Long.valueOf(parte.substring(indexOfDecimal+1))*60/100;
+			
+			if (i == trozo.length-1) {
+				res += horas + " horas y " + minutos + " minutos. ";
+			}else {
+				res += horas + " horas y " + minutos + " minutos, ";
+			}
+			
+			
+		}
+		
+		return res;
+	}
 
 	@Override
 	public Dashboard findOne(final Request<Dashboard> request) {
 		assert request != null;
 
 		Dashboard result;
-		Double numPrivateTask;
-		Double numPublicTask;
-		Double numFinishedTask;
-		Double numCurrentTask;
+		Integer numPrivateTask;
+		Integer numPublicTask;
+		Integer numFinishedTask;
+		Integer numCurrentTask;
 		String numExecutions;
 		String numWorkloads;
 		
@@ -77,8 +117,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setNumPublicTask(numPublicTask);
 		result.setNumFinishedTask(numFinishedTask);
 		result.setNumCurrentTask(numCurrentTask);
-		result.setNumExecutions(numExecutions);
-		result.setNumWorkloads(numWorkloads);
+		result.setNumExecutions(this.parsenumExecutions(numExecutions));
+		result.setNumWorkloads(this.parseWorkload(numWorkloads));
 		
 
 		return result;
