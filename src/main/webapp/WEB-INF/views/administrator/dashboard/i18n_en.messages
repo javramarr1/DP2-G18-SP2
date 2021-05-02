@@ -16,7 +16,8 @@ administrator.dashboard.form.label.num-private-task =  Total number of private t
 administrator.dashboard.form.label.num-public-task =  Total number of public tasks
 administrator.dashboard.form.label.num-finished-task = Total number of finished tasks
 administrator.dashboard.form.label.num-current-task = Total number of current tasks
-administrator.dashboard.form.label.num-executions = Average, deviation, minimum and maximum in execution
-administrator.dashboard.form.label.num-workloads = Average, deviation, minimum and maximum in execution of workload
+administrator.dashboard.form.label.num-executions = Average, deviation, minimum and maximum task executions periods
+administrator.dashboard.form.label.num-workloads = Average, deviation, minimum and maximum task workloads
+administrator.dashboard.form.label.dias = (Measured in days)
 
 

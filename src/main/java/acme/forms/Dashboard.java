@@ -27,10 +27,10 @@ public class Dashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Double						numPrivateTask;
-	Double						numPublicTask;
-	Double						numFinishedTask;
-	Double						numCurrentTask;
+	Integer						numPrivateTask;
+	Integer						numPublicTask;
+	Integer						numFinishedTask;
+	Integer					numCurrentTask;
 	String						numExecutions;
 	String						numWorkloads;
 	

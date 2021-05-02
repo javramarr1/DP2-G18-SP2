@@ -503,6 +503,9 @@ at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(Abst
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 15504 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 5.003 seconds (JVM running for 5.435)
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 19580 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 8.467 seconds (JVM running for 9.125)
 INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -534,6 +537,7 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccoun
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 5856 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 4.57 seconds (JVM running for 5.0)
@@ -843,6 +847,9 @@ INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 17524 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
 INFO [acme.Launcher] The following profiles are active: development,populator
 INFO [acme.Launcher] Started Launcher in 4.645 seconds (JVM running for 5.067)
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 16012 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 9.421 seconds (JVM running for 10.083)
 INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -874,6 +881,7 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccoun
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.NullPointerException
