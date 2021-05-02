@@ -1,4 +1,4 @@
-package acme.features.manager.task;
+package acme.features.spam;
 
 import javax.annotation.PostConstruct;
 
@@ -6,30 +6,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import acme.entities.roles.Manager;
-import acme.entities.tasks.Task;
+import acme.entities.spam.Spam;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Administrator;
 
 @Controller
-@RequestMapping("/manager/task")
-public class ManagerTasksController extends AbstractController<Manager, Task>{
+@RequestMapping("/administrator/spam")
+public class AdministratorSpamController extends AbstractController<Administrator, Spam>{
+		@Autowired
+		protected AdministratorSpamCreateService createService;
 	
 		@Autowired
-		protected ManagerTaskCreateService createService;
+		protected AdministratorSpamListService	listService;
 		
 		@Autowired
-		protected ManagerTaskListService	listService;
+		protected AdministratorSpamShowService	showService;
 		
 		@Autowired
-		protected ManagerTaskShowService	showService;
+		protected AdministratorSpamUpdateService	updateService;
 		
 		@Autowired
-		protected ManagerTaskUpdateService	updateService;
-		
-		@Autowired
-		protected ManagerTaskDeleteService	deleteService;
-		
+		protected AdministratorSpamDeleteService	deleteService;
+	
 		@PostConstruct
 		protected void initialise() {
 			super.addBasicCommand(BasicCommand.LIST, this.listService);
