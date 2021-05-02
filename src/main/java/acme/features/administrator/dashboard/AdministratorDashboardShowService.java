@@ -58,10 +58,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			final String parte = trozo[i];
 			
 			if (i == trozo.length-1) {
-				res += parte + " días. ";
+				res += parte + " dd. ";
 				
 			}else {
-				res += parte + " días, ";
+				res += parte + " dd, ";
 			}
 			
 			
@@ -80,9 +80,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			final long minutos = Long.valueOf(parte.substring(indexOfDecimal+1))*60/100;
 			
 			if (i == trozo.length-1) {
-				res += horas + " horas y " + minutos + " minutos. ";
+				res += horas + " hrs. y " + minutos + " min. ";
 			}else {
-				res += horas + " horas y " + minutos + " minutos, ";
+				res += horas + " hrs. y " + minutos + " min, ";
 			}
 			
 			

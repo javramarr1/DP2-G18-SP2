@@ -18,5 +18,6 @@ administrator.dashboard.form.label.num-finished-task = Número total de tareas f
 administrator.dashboard.form.label.num-current-task = Número total de tareas pendientes
 administrator.dashboard.form.label.num-executions = Media, desviación, mínimo y máximo de período de ejecución
 administrator.dashboard.form.label.num-workloads = Media, desviación, mínimo y máximo de carga de trabajo
+administrator.dashboard.form.label.dias = (Medido en días)
 
 
