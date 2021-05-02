@@ -1,0 +1,13 @@
+# i18n_en.messages
+
+administrator.spam.form.title.show = Spam
+
+administrator.spam = Spam
+administrator.spam.form.label.word = Word
+
+administrator.spam.list.label.word = Word
+
+administrator.spam.form.button.update = Update
+administrator.spam.form.button.delete = Delete
+administrator.spam.form.button.create = Create
+administrator.spam.form.button.return = Return

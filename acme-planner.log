@@ -495,17 +495,6 @@ org.apache.jasper.servlet.JspServlet.handleMissingResource(JspServlet.java:406):
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:250): Request method 'POST' not supported
-ERROR [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [company] in table [manager]
-WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [company] in table [manager]
-ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [company] in table [manager]
-at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421): [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema-validation: missing column [company] in table [manager]
-at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:136): Schema-validation: missing column [company] in table [manager]
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 15504 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 5.003 seconds (JVM running for 5.435)
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on LAPTOP-3MG9834M with PID 19580 (C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2\target\classes started by fjrod in C:\Users\fjrod\Workspace-21.1\Projects\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 8.467 seconds (JVM running for 9.125)
 INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -537,10 +526,6 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccoun
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
-
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 5856 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 4.57 seconds (JVM running for 5.0)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -593,59 +578,6 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.en
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=12, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task01 = acme.entities.tasks.Task{id=13, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task02 = acme.entities.tasks.Task{id=14, version=0}
-INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
-ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
-ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
-ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.hibernate.validator.internal.constraintvalidators.hv.ScriptAssertContext.evaluateScriptAssertExpression(ScriptAssertContext.java:52): HV000023: Error during execution of script "_this.itFits() == true;" occurred.
-org.hibernate.validator.spi.scripting.ScriptEngineScriptEvaluator.doEvaluate(ScriptEngineScriptEvaluator.java:70): HV000233: An error occurred while executing the script: "_this.itFits() == true;".
-java.lang.NullPointerException
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 13824 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 4.5 seconds (JVM running for 4.939)
-INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
-INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
-INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
-INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
-INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating managerUserAccount ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating managerManager ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating managerAuthenticated ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for managerUserAccount.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for managerManager.
-INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for managerAuthenticated.
-INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccount = acme.framework.entities.UserAccount{id=6, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
-INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/sample-data.xml
-INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
-INFO [acme.framework.utilities.DatabasePopulator] Validating shout01 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating shout02 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating shout03 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating shout04 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task01 ... PASS
-INFO [acme.framework.utilities.DatabasePopulator] Validating task02 ... FAILED
-INFO [acme.framework.utilities.DatabasePopulator] Violated constraints on entity task02: start_date : Must be in the future
-, end_date : Must be in the future
-INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
-INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 17496 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
-INFO [acme.Launcher] The following profiles are active: development,populator
-INFO [acme.Launcher] Started Launcher in 4.612 seconds (JVM running for 5.042)
 INFO [acme.framework.utilities.DatabasePopulator] Populating sample data
 INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
 INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
@@ -697,6 +629,7 @@ INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout02 = acme.en
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout03 = acme.entities.shouts.Shout{id=11, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting shout04 = acme.entities.shouts.Shout{id=12, version=0}
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task01 = acme.entities.tasks.Task{id=13, version=0}
+<<<<<<< HEAD
 INFO [acme.framework.utilities.DatabasePopulator] > Persisting task02 = acme.entities.tasks.Task{id=14, version=0}
 INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
 INFO [acme.Launcher] Starting Launcher using Java 1.8.0_271 on DESKTOP-08JJ4PU with PID 3136 (C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2\target\classes started by Juan Manuel Garcia in C:\Users\Juan Manuel Garcia\git\DP2-G18-SP2)
@@ -1109,3 +1042,66 @@ WARN [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebSer
 ERROR [org.springframework.boot.SpringApplication] at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788): Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:275): Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:100): Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
+=======
+>>>>>>> branch 'develop' of https://github.com/Juanmagc99/DP2-G18-SP2
+INFO [acme.Launcher] Starting Launcher using Java 1.8.0_281 on PC-MIGUEL with PID 9436 (C:\Users\Admin\git\DP2-G18-SP2\target\classes started by Admin in C:\Users\Admin\git\DP2-G18-SP2)
+INFO [acme.Launcher] The following profiles are active: development,populator
+INFO [acme.Launcher] Started Launcher in 121.611 seconds (JVM running for 148.556)
+INFO [acme.framework.utilities.DatabasePopulator] Populating initial data
+INFO [acme.framework.utilities.DatabasePopulator] Recreating schema
+INFO [acme.framework.utilities.DatabasePopulator] Populating entities from classpath:/WEB-INF/population/initial-data.xml
+INFO [acme.framework.utilities.DatabasePopulator] Validating your entities.
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating anonymousAnonymous ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAdministrator ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating administratorAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerUserAccount ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerManager ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Validating managerAuthenticated ... PASS
+INFO [acme.framework.utilities.DatabasePopulator] Sorting your entities topologically.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 0 for anonymousUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 1 for anonymousAnonymous.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 2 for administratorUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 3 for administratorAdministrator.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 4 for administratorAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 5 for managerUserAccount.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 6 for managerManager.
+INFO [acme.framework.utilities.DatabasePopulator] > Setting index 7 for managerAuthenticated.
+INFO [acme.framework.utilities.DatabasePopulator] Persiting your entities.
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousUserAccount = acme.framework.entities.UserAccount{id=1, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting anonymousAnonymous = acme.framework.entities.Anonymous{id=2, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorUserAccount = acme.framework.entities.UserAccount{id=3, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAdministrator = acme.framework.entities.Administrator{id=4, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting administratorAuthenticated = acme.framework.entities.Authenticated{id=5, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerUserAccount = acme.framework.entities.UserAccount{id=6, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerManager = acme.entities.roles.Manager{id=7, version=0}
+INFO [acme.framework.utilities.DatabasePopulator] > Persisting managerAuthenticated = acme.entities.roles.Manager{id=8, version=0}
+INFO [acme.framework.configuration.ShutdownConfiguration] The system is shutting down...
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP POST /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): End-point no disponible
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: java.lang.String.substring(String.java:1967): String index out of range: -1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Acceso no autorizado
