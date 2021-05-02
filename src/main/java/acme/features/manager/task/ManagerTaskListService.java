@@ -22,7 +22,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		protected ManagerTaskRepository repository;
 
 
-		// AbstractListService<Administrator, Task> interface 
+		// AbstractListService<Manager, Task> interface 
 
 		@Override
 		public boolean authorise(final Request<Task> request) {
@@ -37,7 +37,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "title", "start_date", "end_date", "workload");
+			request.unbind(entity, model, "title", "start_date", "end_date", "workload", "description", "op_link");
 		}
 
 		@Override
@@ -50,12 +50,8 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 
 			Calendar  calendar;
 			calendar=Calendar.getInstance();   //get the Calendar
-			
-			System.out.println(principal.getAccountId());
-			
 
-			//result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getAccountId());
-			result = this.repository.findNonFinishedTask(calendar.getTime());
+			result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getActiveRoleId());
 			
 			return result;
 		}
