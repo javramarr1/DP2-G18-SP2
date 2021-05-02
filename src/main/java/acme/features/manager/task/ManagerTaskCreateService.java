@@ -50,11 +50,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		Task result;
 
 		result = new Task();
-		result.setTitle("Pruebas unitarias");
-		result.setDescription("Crear pruebas unitarias para el TokenService usando mockito");
-		result.setIs_private(false);
-		result.setWorkload("04 33/60");
-		result.setOp_link("www.google.es");
+		result.setTitle(null);
+		result.setDescription(null);
+		result.setIs_private(null);
+		result.setWorkload(null);
+		result.setOp_link(null);
 		
 		return result;
 	}
@@ -64,6 +64,18 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (entity.getStart_date() != null && entity.getEnd_date() !=null) {
+			if(Boolean.FALSE.equals(entity.okDates()) ) {
+				errors.add("start_date", "The start of the date must go before the end.");
+			}
+		}
+		
+		if (entity.getWorkload() != null && entity.getStart_date() != null && entity.getEnd_date() !=null) {
+			if(Boolean.FALSE.equals(entity.itFits())) {
+				errors.add("workload", "Workload time must fit between both dates.");
+			}			
+		}
 	}
 
 	@Override
