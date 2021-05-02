@@ -311,13 +311,13 @@ Shout
     </coordinates>
     <panel_attributes>Task
 --
-+ title: String {NotBlank, min_char = 1, max_char = 80}
-+ description: String {NotBlank, min_char = 1, max_char = 500}
-+ start_date: String {NotNull, Format = "yyyy-MM-dd HH:mm"}
-+ end_date: String {NotNull, Format = "yyyy-MM-dd HH:mm"}
-+ workload: String {NotNull, Pattern = "^[0-9]{2}[\\s][0-9]{2}[/][60]*$"}
++ title: String {NotBlank}
++ description: String {NotBlank}
++ start_date: Date {NotNull, Temporal(TIMESTAMP), Future}
++ end_date: Date {NotNull, Temporal(TIMESTAMP), Future}
++ workload: Double {NotNull}
 + is_private: Boolean {NotNull}
-+ op_link : String{URL}</panel_attributes>
++ op_link : String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
