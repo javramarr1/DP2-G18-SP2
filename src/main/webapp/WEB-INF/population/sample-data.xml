@@ -71,5 +71,46 @@
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
 	</bean>
+	
+	<bean id="task03" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/10/17 00:00"/>
+		<property name="end_date" value="2021/10/18 12:00"/>
+		<property name="workload" value="1.50"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+	</bean>
+	
+	
+	<bean id="task04" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/07/01 00:00"/>
+		<property name="end_date" value="2021/07/01 10:00"/>
+		<property name="workload" value="9.40"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+	</bean>
+	
+	<bean id="task05" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/05/27 00:00"/>
+		<property name="end_date" value="2021/05/27 12:00"/>
+		<property name="workload" value="2.00"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="true"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+	</bean>
+	
+	<bean id="task06" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/10/17 01:00"/>
+		<property name="end_date" value="2021/10/18 02:00"/>
+		<property name="workload" value="1.50"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="true"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+	</bean>
 
 </beans>
