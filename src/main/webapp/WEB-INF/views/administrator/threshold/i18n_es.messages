@@ -1,0 +1,11 @@
+# i18n_en.messages
+
+administrator.threshold.form.title.show = Umbral
+
+administrator.threshold = Umbral
+administrator.threshold.form.label.threshold = Umbral
+
+administrator.threshold.list.label.threshold = Umbral
+
+administrator.threshold.form.button.update = Actualizar
+administrator.threshold.form.button.return = Volver
