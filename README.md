@@ -41,7 +41,7 @@ git clone https://github.com/Juanmagc99/DP2-G18-SP2.git
 2) Populate the database by running Populate Sample
 
 3) Run the project
- Visit [http://localhost:8080/Acme-Planner/master/welcome](http://localhost:8080/Acme-Planner/master/welcome) in your browser.
+[Visit](http://localhost:8080/Acme-Planner/master/welcome) in your browser.
 
 3) Introduce the Login Credentials
 * Manager:
