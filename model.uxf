@@ -288,7 +288,7 @@ has v</panel_attributes>
     <id>UMLClass</id>
     <coordinates>
       <x>714</x>
-      <y>287</y>
+      <y>294</y>
       <w>259</w>
       <h>105</h>
     </coordinates>
@@ -309,7 +309,8 @@ Shout
       <w>378</w>
       <h>126</h>
     </coordinates>
-    <panel_attributes>Task
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Task
 --
 + title: String {NotBlank,Length(1, 80)}
 + description: String {NotBlank,Length(1, 500)}
@@ -442,6 +443,34 @@ Manager
 --
 
 bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>147</y>
+      <w>196</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Spam
+--
++ word: String {NotBlank, Length(1, 80)}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>875</x>
+      <y>217</y>
+      <w>273</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Threshold
+--
++ threshold: Double {NotNull,Min(0),Max(100), Digits(3,2)}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
