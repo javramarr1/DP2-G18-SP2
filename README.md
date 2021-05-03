@@ -1,4 +1,4 @@
-# Acme Planner - A Project for DP2
+# 📅 Acme Planner - A Project for DP2
 This project has been programmed as an assignment for DP2, a course of the Software Engineering degree from the University of Seville
 
 Acme Planner is a website programmed in Java, which, using Starter Project as a template, implements the following functionalities
