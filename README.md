@@ -28,9 +28,9 @@ Acme Planner is a website programmed in Java, which, using Starter Project as a 
 The following items should be installed in your system:
 * Java 8 or newer
 * git command line tool (https://git-scm.com/downloads)
-* Your preferred IDE 
-  * Eclipse with the m2e plugin
-  * IntelliJ IDEA
+* Eclipse
+* Maria DB
+* DBeaver
 
 ## 🧑🏼‍💻 Running Acme Planner locally
 ### Steps:
