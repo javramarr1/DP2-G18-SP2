@@ -8,12 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.manager.manager.form.title.create = Hazte manager
-authenticated.manager.manager.form.title.update = Actualiza tus datos de manager
+authenticated.manager.form.title.create = Hazte manager
+authenticated.manager.form.title.update = Actualiza tus datos de manager
 
-authenticated.manager.manager.form.label.compañía = Compañía
-authenticated.manager.manager.form.label.sector = Sector
+authenticated.manager.form.label.compañía = Compañía
+authenticated.manager.form.label.sector = Sector
 
-authenticated.manager.manager.form.button.create = Registrar
-authenticated.manager.manager.form.button.update = Actualizar
-authenticated.manager.manager.form.button.return = Volver
+authenticated.manager.form.button.create = Registrar
+authenticated.manager.form.button.update = Actualizar
+authenticated.manager.form.button.return = Volver

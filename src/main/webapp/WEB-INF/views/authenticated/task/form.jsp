@@ -11,13 +11,8 @@
 	<acme:form-moment code="authenticated.task.form.label.end_date" path="end_date"/>
 	<acme:form-double code="authenticated.task.form.label.workload" path="workload"/>
 	<acme:form-textbox code="authenticated.task.form.label.op_url" path="op_url"/>
-	<acme:form-select code="authenticated.task.form.label.is_private" path="is_private">
-		<acme:form-option code="YES" value="true" selected="${is_private == true}"/>
-		<acme:form-option code="NO" value="false" selected="${is_private == false}"/>
-	</acme:form-select>
-	
 
-	<acme:form-submit test="${command == 'create'}" code="authenticated.task.form.button.create" action="/authenticated/task/create"/>
+	
   	<acme:form-return code="authenticated.task.form.button.return"/>
 
 </acme:form>

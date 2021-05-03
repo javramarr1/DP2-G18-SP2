@@ -14,7 +14,7 @@ public class SpamService {
 	public boolean validateNoSpam(final String text) {
 		
 		final List<String> spamWords = this.spamRepository.findAllSpamWords();
-		final String cutText = text.replace(" ", "").toLowerCase().trim();
+		final String cutText = text.replace(" ", "").replace("\n", "n").toLowerCase().trim();
 		final Integer numberOfLetters = cutText.length();
 		Integer counter = 0; 
 		for(int i = 0; i<spamWords.size();i++) {
@@ -22,7 +22,7 @@ public class SpamService {
 			boolean check = cutText.contains(word);
 			while(check) {
 				counter+=word.length();
-				check = cutText.substring(text.indexOf(word)+word.length()).contains(word);
+				check = cutText.substring(cutText.indexOf(word)+word.length()).contains(word);
 			}
 		}
 		
