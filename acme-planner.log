@@ -2976,3 +2976,6 @@ ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
 ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:276): could not execute statement; SQL [n/a]; constraint [UK_7fx730m6er7pkgx28fdu9rhsf]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:59): could not execute statement
 com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117): Duplicate entry 'nigeria' for key 'UK_7fx730m6er7pkgx28fdu9rhsf'
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] HTTP GET /Acme-Planner/WEB-INF/views/framework/page.jsp HTTP/1.1
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Status: 500
+ERROR [org.apache.jsp.WEB_002dINF.views.framework.panic_jsp] Exception: acme.framework.helpers.Assert.state(Assert.java:45): Acceso no autorizado

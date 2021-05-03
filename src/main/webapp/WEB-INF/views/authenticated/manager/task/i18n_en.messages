@@ -23,3 +23,4 @@ manager.task.form.label.spam = Please don't try to add spam as a task
 manager.task.form.label.workloadError = Workload time must fit between both dates
 manager.task.form.label.datesError = Start date must be before end date
 manager.task.form.label.less60 = In case minutes surpass 60, you must add an hour first
+manager.task.form.label.less01 = Can't add seconds

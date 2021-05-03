@@ -8,6 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.Future;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -62,6 +63,7 @@ public class Task extends DomainEntity{
 		
 		@NotNull
 		@Min(0)
+		@Digits(integer = 3, fraction = 2)
 		protected Double workload;
 		
 		public Boolean okDates() {

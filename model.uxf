@@ -316,7 +316,7 @@ Task
 + description: String {NotBlank,Length(1, 500)}
 + start_date: Date {NotNull, Temporal(TIMESTAMP)}
 + end_date: Date {NotNull, Temporal(TIMESTAMP)}
-+ workload: double {NotNull, Min(0)}
++ workload: double {NotNull, Min(0),Digits(3,2)}
 + is_private: boolean {NotNull}
 + op_link : String {URL}</panel_attributes>
     <additional_attributes/>

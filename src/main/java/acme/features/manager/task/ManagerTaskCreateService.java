@@ -86,7 +86,8 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		if(entity.getWorkload() != null){
 	        final String doubleAsString = String.valueOf(entity.getWorkload());
 	        final int indexOfDecimal = doubleAsString.indexOf(".");
-	        final boolean less60 = 60 >= Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
+	        final Long minutes = Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
+	        final boolean less60 = 60 >= minutes;
 	        errors.state(request, less60, "workload", "manager.task.form.label.less60", "spam");
 	    }
 		
