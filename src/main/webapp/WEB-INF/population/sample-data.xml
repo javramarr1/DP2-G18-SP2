@@ -22,36 +22,49 @@
 	
 	<!-- Shouts -->
 <bean id="shout01" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/02/13 19:30"/>
-		<property name="author" value="Jhon Doe"/>
-		<property name="text" value="I'm happy!"/>
-		<property name="info"><null/></property>
-	</bean>
+        <property name="moment" value="2021/05/01 19:30"/>
+        <property name="author" value="Jhon Doe"/>
+        <property name="text" value="I'm happy!"/>
+        <property name="info"><null/></property>
+    </bean>
 
-	<bean id="shout02" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/01/09 12:55"/>
-		<property name="author" value="Francisco"/>
-		<property name="text" value="I'm sad!"/>
-		<property name="info" value="http://www.realmadrid.com"/>
-	</bean>
+    <bean id="shout02" class="acme.entities.shouts.Shout">
+        <property name="moment" value="2021/05/02 12:55"/>
+        <property name="author" value="Francisco"/>
+        <property name="text" value="I'm sad!"/>
+        <property name="info" value="http://www.realmadrid.com"/>
+    </bean>
 
-	<bean id="shout03" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/03/27 01:30"/>
-		<property name="author" value="Javier"/>
-		<property name="text" value="I love github!"/>
-		<property name="info" value="http://Github.com"/>
-	</bean>
-	
+    <bean id="shout03" class="acme.entities.shouts.Shout">
+        <property name="moment" value="2021/05/01 01:30"/>
+        <property name="author" value="Javier"/>
+        <property name="text" value="I love github!"/>
+        <property name="info" value="http://github.com"/>
+    </bean>
 
-	<bean id="shout04" class="acme.entities.shouts.Shout">
-		<property name="moment" value="2021/04/20 01:30"/>
-		<property name="author" value="Misco"/>
-		<property name="text" value="I dont know"/>
-		<property name="info"><null/></property>
 
-	</bean>
+    <bean id="shout04" class="acme.entities.shouts.Shout">
+        <property name="moment" value="2021/03/28 01:30"/>
+        <property name="author" value="Misco"/>
+        <property name="text" value="I dont know"/>
+        <property name="info"><null/></property>
+    </bean>
 
-	<bean name="managerUserAccount" class="acme.framework.entities.UserAccount">
+    <bean id="shout05" class="acme.entities.shouts.Shout">
+        <property name="moment" value="2021/05/02 12:55"/>
+        <property name="author" value="Fernando"/>
+        <property name="text" value="Good work as a team!"/>
+        <property name="info" value="https://www.google.com"/>
+    </bean>
+
+    <bean id="shout06" class="acme.entities.shouts.Shout">
+        <property name="moment" value="2021/05/01 12:55"/>
+        <property name="author" value="Manuel"/>
+        <property name="text" value="We have a reunion today"/>
+        <property name="info" value="https://discord.com"/>
+    </bean>
+
+	<bean name="managerUserAccount1" class="acme.framework.entities.UserAccount">
 		<property name="username" value="manager" />
 		<property name="password" value="manager" />
 		<property name="enabled" value="true" />
@@ -75,14 +88,13 @@
 				<property name="company" value="us"/>
   				<property name="sector" value="tic"/>
 
-		<property name="userAccount" ref="managerUserAccount" />
+		<property name="userAccount" ref="managerUserAccount1" />
 	</bean>
 	
-	<bean name="managerAuthenticated" class="acme.entities.roles.Manager">
-				<property name="company" value="us"/>
-  				<property name="sector" value="tic"/>
-		<property name="userAccount" ref="managerUserAccount" />
+	<bean name="managerAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="managerUserAccount1" />
 	</bean>
+
 
 
 	<bean id="task01" class="acme.entities.tasks.Task">
@@ -93,7 +105,7 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	<bean id="task02" class="acme.entities.tasks.Task">
@@ -104,7 +116,7 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	<bean id="task03" class="acme.entities.tasks.Task">
@@ -115,7 +127,7 @@
 		<property name="is_private" value="false"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	
@@ -127,7 +139,7 @@
 		<property name="is_private" value="false"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	<bean id="task05" class="acme.entities.tasks.Task">
@@ -138,7 +150,7 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	<bean id="task06" class="acme.entities.tasks.Task">
@@ -149,7 +161,18 @@
 		<property name="is_private" value="true"/>
 		<property name="description" value="Hi just trying tasks"/>
 		<property name="op_link" value="http://1happybirthday.com"/>
-		<property name="manager" ref="managerAuthenticated" />
+		<property name="manager" ref="managerManager" />
+	</bean>
+	
+	<bean id="task07" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/05/03 13:59"/>
+		<property name="end_date" value="2021/05/03 14:00"/>
+		<property name="workload" value="0.01"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+		<property name="manager" ref="managerManager" />
 	</bean>
 	
 	<bean id="spam01" class="acme.entities.spam.Spam">

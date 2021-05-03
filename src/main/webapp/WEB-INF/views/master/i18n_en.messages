@@ -62,7 +62,7 @@ master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.user-account ####################################################
-master.menu.authenticated.taskList=List
+master.menu.authenticated.taskList= List public tasks
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
 master.menu.user-account.provider = Provider data
@@ -70,7 +70,10 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.become-manager= Become a manager
+master.menu.user-account.manager.update = Change data
 
+# master.menu.authenticated ##############################################################################
+master.menu.authenticated = Authenticated user
 
 # master.footer ###############################################################
 
