@@ -76,8 +76,13 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		for (int i = 0; i < trozo.length; i++) {
 			final String parte = trozo[i];
 			final int indexOfDecimal = parte.indexOf(".");
-			final long horas = Long.valueOf(parte.substring(0, indexOfDecimal));
-			final long minutos = Long.valueOf(parte.substring(indexOfDecimal+1))*60/100;
+			long horas = Long.valueOf(parte.substring(0, indexOfDecimal));
+			long minutos = Long.valueOf(parte.substring(indexOfDecimal+1));
+			
+			if (minutos>=60) {
+				minutos = minutos-60;
+				horas = horas + 1;
+			}
 			
 			if (i == trozo.length-1) {
 				res += horas + " hrs. y " + minutos + " min. ";

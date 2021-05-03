@@ -407,7 +407,7 @@ has v</panel_attributes>
       <w>259</w>
       <h>84</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;&gt;&gt;
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
 Dashboard
 --
 + numPrivateTask: integer
