@@ -36,7 +36,7 @@ The following items should be installed in your system:
 ### Steps:
 1) On the command line
 ```
-git clone https://github.com/gii-is-DP1/dp1-2020-g2-07.git
+git clone https://github.com/Juanmagc99/DP2-G18-SP2.git
 ```
 2) Populate the database by running Populate Sample
 
