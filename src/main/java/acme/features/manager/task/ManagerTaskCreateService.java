@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
+import acme.features.spam.SpamService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -14,9 +15,15 @@ import acme.framework.services.AbstractCreateService;
 @Service
 public class ManagerTaskCreateService implements AbstractCreateService<Manager, Task>{
 
-	@Autowired
-	protected ManagerTaskRepository repository;
 	
+	protected ManagerTaskRepository repository;
+	protected SpamService spamService;
+	
+	@Autowired
+	protected ManagerTaskCreateService(final ManagerTaskRepository repository, final SpamService spamService) {
+		this.repository = repository;
+		this.spamService = spamService;
+	}
 	
 	@Override
 	public boolean authorise(final Request<Task> request) {
@@ -69,16 +76,17 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert errors != null;
 		
 		if (entity.getStart_date() != null && entity.getEnd_date() !=null) {
-			if(Boolean.FALSE.equals(entity.okDates()) ) {
-				errors.add("start_date", "The start of the date must go before the end.");
-			}
+			errors.state(request, entity.okDates(), "start_date","manager.task.form.label.datesError", "");	
 		}
 		
 		if (entity.getWorkload() != null && entity.getStart_date() != null && entity.getEnd_date() !=null) {
-			if(Boolean.FALSE.equals(entity.itFits())) {
-				errors.add("workload", "Workload time must fit between both dates.");
-			}			
+			errors.state(request, entity.itFits(), "workload","manager.task.form.label.workloadError", "");			
 		}
+		
+		errors.state(request, this.spamService.validateNoSpam(entity.getTitle()), "title", "manager.task.form.label.spam", "spam");
+		errors.state(request, this.spamService.validateNoSpam(entity.getDescription()), "description", "manager.task.form.label.spam", "spam");
+		errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
+		
 	}
 
 	@Override

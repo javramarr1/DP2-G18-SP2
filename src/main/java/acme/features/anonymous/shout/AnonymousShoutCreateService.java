@@ -64,10 +64,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		moment = new Date(System.currentTimeMillis() - 1);
 
 		result = new Shout();
-		result.setAuthor("John Doe");
-		result.setText("Lorem ipsum!");
 		result.setMoment(moment);
-		result.setInfo("http://example.org");
+		
 
 		return result;
 	}
@@ -78,9 +76,12 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert errors != null;
 		
-		errors.state(request, this.spamService.validateNoSpam(entity.getAuthor()), "author", "anonymous.shout.form.label.spam", "spam");
-		errors.state(request, this.spamService.validateNoSpam(entity.getInfo()), "info", "anonymous.shout.form.label.spam", "spam");
-		errors.state(request, this.spamService.validateNoSpam(entity.getText()), "text", "anonymous.shout.form.label.spam", "spam");
+		if(entity.getAuthor() != null && entity.getInfo() != null && entity.getText() != null) {
+			errors.state(request, this.spamService.validateNoSpam(entity.getAuthor()), "author", "anonymous.shout.form.label.spam", "spam");
+			errors.state(request, this.spamService.validateNoSpam(entity.getInfo()), "info", "anonymous.shout.form.label.spam", "spam");
+			errors.state(request, this.spamService.validateNoSpam(entity.getText()), "text", "anonymous.shout.form.label.spam", "spam");
+		}
+		
 	}
 
 	@Override

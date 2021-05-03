@@ -18,3 +18,7 @@ manager.task.list.label.op_url=Link
 
 manager.task.form.button.update=Update
 manager.task.form.button.delete=Delete
+
+manager.task.form.label.spam = Please don't try to add spam as a task
+manager.task.form.label.workloadError = Workload time must fit between both dates
+manager.task.form.label.datesError = Start date must be before end date

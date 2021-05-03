@@ -18,3 +18,7 @@ manager.task.list.label.op_url=Enlace
 
 manager.task.form.button.update=Actualizar
 manager.task.form.button.delete=Borrar
+
+manager.task.form.label.spam = Por favor, no incluya spam en las tareas
+manager.task.form.label.workloadError = La carga de trabajo debe encajar entre las dos fechas
+manager.task.form.label.datesError = La fecha de inicio debe ser anterior a la fecha de fin
