@@ -12,8 +12,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousTaskRepository extends AbstractRepository{
 	
-	@Query("select t from Task t where t.end_date >= ?1 order by t.workload ")
-	Collection<Task> findNonFinishedTask(Date end);
+	@Query("select t from Task t where t.end_date >= ?1 and t.is_private = 0 order by t.workload ")
+	Collection<Task> findNonFinishedTaskAndPublic(Date end);
 	
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskById(int id);

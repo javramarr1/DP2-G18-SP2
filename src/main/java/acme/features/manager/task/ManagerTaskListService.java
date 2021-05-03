@@ -6,10 +6,11 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
@@ -21,7 +22,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		protected ManagerTaskRepository repository;
 
 
-		// AbstractListService<Administrator, Task> interface 
+		// AbstractListService<Manager, Task> interface 
 
 		@Override
 		public boolean authorise(final Request<Task> request) {
@@ -36,7 +37,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "title", "start_date", "end_date", "workload");
+			request.unbind(entity, model, "title", "start_date", "end_date", "workload", "description", "op_link");
 		}
 
 		@Override
@@ -44,12 +45,14 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			assert request != null;
 
 			final Collection<Task> result;
+			Principal principal;
+			principal = request.getPrincipal();
+
 			Calendar  calendar;
 			calendar=Calendar.getInstance();   //get the Calendar
+
+			result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getActiveRoleId());
 			
-
-			result = this.repository.findNonFinishedTask(calendar.getTime());
-
 			return result;
 		}
 

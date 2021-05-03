@@ -40,7 +40,7 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
 
 		final Collection<Task> result;
 		Calendar  calendar;
-		calendar=Calendar.getInstance();   //get the Calendar
+		calendar=Calendar.getInstance();  
 		
 
 		result = this.repository.findFinishedTask(calendar.getTime());

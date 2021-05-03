@@ -1,5 +1,5 @@
 /*
- * AuthenticatedmanagerController.java
+ * AuthenticatedConsumerController.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authentificated.manager;
+package acme.features.authenticated.manager;
 
 import javax.annotation.PostConstruct;
 
@@ -18,14 +18,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import acme.entities.roles.Manager;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Manager;
 
 @Controller
 @RequestMapping("/authenticated/manager/")
-public class AuthenticatedmanagerController extends AbstractController<Authenticated, Manager> {
+public class AuthenticatedManagerController extends AbstractController<Authenticated, Manager> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -38,7 +38,7 @@ public class AuthenticatedmanagerController extends AbstractController<Authentic
 	// Constructors -----------------------------------------------------------
 
 
-	@PostConstruct
+		@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);

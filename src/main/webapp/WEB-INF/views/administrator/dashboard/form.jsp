@@ -20,9 +20,6 @@
 </h2>
 
 <table class="table table-sm">
-	<caption>
-		<acme:message code="administrator.dashboard.form.title.general-indicators"/>
-	</caption>	
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.num-private-task"/>
@@ -60,7 +57,7 @@
 			<acme:message code="administrator.dashboard.form.label.num-executions"/>
 		</th>
 		<td>
-			<acme:print value="${numExecutions}"/>
+			<acme:print value="${numExecutions}"/> <acme:message code="administrator.dashboard.form.label.dias"/>
 		</td>
 	</tr>	
 	<tr>

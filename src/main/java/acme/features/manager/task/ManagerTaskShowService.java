@@ -6,10 +6,11 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Manager;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -21,7 +22,20 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 	@Override
 	public boolean authorise(final Request<Task> request) {
 		assert request !=null;
-		return true;
+		
+		boolean result;
+		int taskId;
+		Task task;
+		Manager employer;
+		Principal principal;
+
+		taskId = request.getModel().getInteger("id");
+		task = this.repository.findOneTaskById(taskId);
+		employer = task.getManager();
+		principal = request.getPrincipal();
+		result = employer.getUserAccount().getId() == principal.getAccountId();
+
+		return result;
 	}
 
 	@Override

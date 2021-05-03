@@ -1,0 +1,11 @@
+# i18n_en.messages
+
+administrator.threshold.form.title.show = Threshold
+
+administrator.threshold = Threshold
+administrator.threshold.form.label.threshold = Threshold
+
+administrator.threshold.list.label.threshold = Threshold
+
+administrator.threshold.form.button.update = Update
+administrator.threshold.form.button.return = Return

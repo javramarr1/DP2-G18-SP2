@@ -4,15 +4,20 @@ import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-import org.hibernate.validator.constraints.ScriptAssert;
+import org.hibernate.validator.constraints.URL;
 
+import acme.entities.roles.Manager;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,8 +25,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@ScriptAssert(lang = "javascript", script = "_this.okDates();", message = "The end of the task must be later than the start")
-@ScriptAssert(lang = "javascript", script = "_this.itFits() == true;", message = "The workload time must fit between the period of the task")
 public class Task extends DomainEntity{
 	
 	// Serialisation identifier -----------------------------------------------
@@ -29,7 +32,11 @@ public class Task extends DomainEntity{
 		protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
-
+		@NotNull
+		@Valid
+		@ManyToOne(optional = false)
+		protected Manager manager;
+		
 		@NotBlank
 		@Size(min= 1, max = 80)
 		protected String title;
@@ -39,23 +46,25 @@ public class Task extends DomainEntity{
 		protected String description;
 		
 		@Temporal(TemporalType.TIMESTAMP)
-		//@Future
+		@Future
 		@NotNull
 		protected Date start_date;
 		
 		@Temporal(TemporalType.TIMESTAMP)
-		//@Future
+		@Future
 		@NotNull
 		protected Date end_date;
 		
 		@NotNull
 		protected Boolean is_private;
 		
+		@URL
 		protected String op_link;
 		
-		@NotBlank
-		@Pattern(regexp = "^[0-9]{2}[\\s][0-9]{2}[/][60]*$")
-		protected String workload;
+		@NotNull
+		@Min(0)
+		@Digits(integer = 3, fraction = 2)
+		protected Double workload;
 		
 		public Boolean okDates() {
 			final Duration duration = Duration.between(this.start_date.toInstant(), this.end_date.toInstant());
@@ -74,7 +83,11 @@ public class Task extends DomainEntity{
 			
 			final long diff = Math.abs(duration.toMinutes());
 			
-			final long wld = 60 * Long.valueOf(this.workload.substring(0,2)) + Long.valueOf(this.workload.substring(3, 5));
+			final String doubleAsString = String.valueOf(this.workload);
+			final int indexOfDecimal = doubleAsString.indexOf(".");
+						
+			final long wld = 60 * Long.valueOf(doubleAsString.substring(0, indexOfDecimal)) + Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
+			
 			
 			if(wld <= diff) { return true;} else { return false;}
 		}

@@ -29,3 +29,8 @@ nbdist/
 mvnw
 
 mvnw\.cmd
+/Acme-Planner (Populate initial).launch
+/Acme-Planner (Populate sample).launch
+/Acme-Planner (Run).launch
+/Acme-Planner (Inquire database).launch
+/starter-project.log
