@@ -7,5 +7,7 @@
 	<acme:form-textbox code="administrator.threshold.form.label.threshold" path="threshold"/>
 	
 	<acme:form-submit test="${command == 'show'}" code="administrator.threshold.form.button.update" action="/administrator/threshold/update"/>
+	<acme:form-submit test="${command == 'update'}" code="administrator.threshold.form.button.update" action="/administrator/threshold/update"/>
+	
   	<acme:form-return code="administrator.threshold.form.button.return"/>
 </acme:form>

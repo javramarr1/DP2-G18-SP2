@@ -4,6 +4,7 @@ administrator.spam.form.title.show = Spam
 
 administrator.spam = Spam
 administrator.spam.form.label.word = Palabra
+administrator.spam.form.label.duplicate = La palabra no puede estar duplicada
 
 administrator.spam.list.label.word = Palabra
 

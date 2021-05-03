@@ -1,6 +1,5 @@
 package acme.entities.spam;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
@@ -18,7 +17,6 @@ public class Spam extends DomainEntity{
 	protected static final long	serialVersionUID	= 1L;
 	
 	@NotBlank
-	@Column(unique=true)
 	@Length(min = 1, max = 50)
 	protected String word;
 	

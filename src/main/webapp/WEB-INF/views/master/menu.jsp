@@ -27,7 +27,7 @@
 		
 		
 		
-		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated') && !hasRole('Manager')">
+		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated') && !hasRole('Manager') && !hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.authenticated.taskList" action="/authenticated/task/list"/>
 		</acme:menu-option>
 		
@@ -49,6 +49,8 @@
 			<acme:menu-suboption code="master.menu.administrator.spam.create" action="/administrator/spam/create"/>
 			<acme:menu-suboption code="master.menu.administrator.spam.list" action="/administrator/spam/list"/>
 			<acme:menu-suboption code="master.menu.administrator.spam.threshold" action="/administrator/threshold/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.taskList" action="/authenticated/task/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>

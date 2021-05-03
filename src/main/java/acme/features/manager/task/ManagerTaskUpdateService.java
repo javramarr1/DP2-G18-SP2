@@ -17,14 +17,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 
 	// Internal state ---------------------------------------------------------
 
-	protected ManagerTaskRepository repository;
-	protected SpamService spamService;
-	
 	@Autowired
-	protected ManagerTaskUpdateService(final ManagerTaskRepository repository, final SpamService spamService) {
-		this.repository = repository;
-		this.spamService = spamService;
-	}
+	protected ManagerTaskRepository repository;
+	@Autowired
+	protected SpamService spamService;
 	
 
 	// AbstractUpdateService<Manager, Task> interface -------------

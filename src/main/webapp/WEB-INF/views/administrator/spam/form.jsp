@@ -9,6 +9,8 @@
 
 	<acme:form-submit test="${command == 'show'}" code="administrator.spam.form.button.update" action="/administrator/spam/update"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.spam.form.button.delete" action="/administrator/spam/delete"/>
+	<acme:form-submit test="${command == 'update'}" code="administrator.spam.form.button.update" action="/administrator/spam/update"/>
+	<acme:form-submit test="${command == 'delete'}" code="administrator.spam.form.button.delete" action="/administrator/spam/delete"/>
 	<acme:form-submit test="${command == 'create'}" code="administrator.spam.form.button.create" action="/administrator/spam/create"/>
   	<acme:form-return code="administrator.spam.form.button.return"/>
 </acme:form>

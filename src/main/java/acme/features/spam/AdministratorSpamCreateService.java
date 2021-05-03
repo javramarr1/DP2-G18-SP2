@@ -60,6 +60,13 @@ public class AdministratorSpamCreateService implements AbstractCreateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+		
+		if (!errors.hasErrors("spam")) {
+            Spam existing;
+
+            existing = this.repository.findOneSpamByName(entity.getWord());
+            errors.state(request, existing == null, "word", "administrator.spam.form.label.duplicate", "word");
+        }
 	}
 
 	@Override
