@@ -17,19 +17,11 @@ Acme Planner is a website programmed in Java, which, using Starter Project as a 
 
 ### An administrator principal must be able to:
 * Display a dashboard with the following indicators:
-▪ Total number of public/private tasks.
-▪ Total number of finished/non-finished tasks.
-▪ Average, deviation, minimum, and maximum task execution periods.
-▪ Average, deviation, minimum, and maximum task workloads.
+  * Total number of public/private tasks.
+  * Total number of finished/non-finished tasks.
+  * Average, deviation, minimum, and maximum task execution periods.
+  * Average, deviation, minimum, and maximum task workloads.
 * Manage the customisation parameters, which involves displaying and updating them.
-
-### As an admin
-* Enable, Edit and Delete clients and employees
-* Create, Edit and Delete rooms and circuits
-* Send email to employees and/or clients
-* Create token codes
-* Assign work to each employee, creating schedules and sessions in their profiles
-* Check the earnings the bussines makes by consulting auto-generated income statements, breaking down the money in different categories. These statements contain charts for an easier reading
 
 ## 👨🏻‍💻 Working with Acme Planner in your IDE
 ### Prerequisites
