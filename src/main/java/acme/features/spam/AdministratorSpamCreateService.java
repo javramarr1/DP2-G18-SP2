@@ -17,6 +17,7 @@ public class AdministratorSpamCreateService implements AbstractCreateService<Adm
 	@Autowired
 	protected SpamRepository repository;
 	
+	protected SpamService spamService;
 	
 	@Override
 	public boolean authorise(final Request<Spam> request) {
@@ -63,10 +64,10 @@ public class AdministratorSpamCreateService implements AbstractCreateService<Adm
 		
 		if (!errors.hasErrors("spam")) {
             Spam existing;
-
             existing = this.repository.findOneSpamByName(entity.getWord());
             errors.state(request, existing == null, "word", "administrator.spam.form.label.duplicate", "word");
         }
+		
 	}
 
 	@Override

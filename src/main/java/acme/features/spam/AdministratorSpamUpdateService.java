@@ -18,6 +18,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
 	@Autowired
 	protected SpamRepository repository;
 
+	protected SpamService spamService;
 	// AbstractUpdateService<Administrator, Spam> interface -------------
 
 
@@ -71,6 +72,7 @@ public class AdministratorSpamUpdateService implements AbstractUpdateService<Adm
             existing = this.repository.findOneSpamByName(entity.getWord());
             errors.state(request, existing == null, "word", "administrator.spam.form.label.duplicate", "word");
         }
+		
 	}
 
 	@Override
