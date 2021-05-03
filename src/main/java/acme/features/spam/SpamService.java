@@ -10,7 +10,7 @@ public class SpamService {
 	
 	@Autowired
 	protected SpamRepository spamRepository;
-	
+
 	public boolean validateNoSpam(final String text) {
 		
 		final List<String> spamWords = this.spamRepository.findAllSpamWords();
