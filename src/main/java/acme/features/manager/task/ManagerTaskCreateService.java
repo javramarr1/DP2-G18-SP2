@@ -83,7 +83,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, entity.itFits(), "workload","manager.task.form.label.workloadError", "");
 		}
 		
-		if(entity.getWorkload() != null){
+		if(!errors.hasErrors("workload")){
 	        final String doubleAsString = String.valueOf(entity.getWorkload());
 	        final int indexOfDecimal = doubleAsString.indexOf(".");
 	        final Long minutes = Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
