@@ -1,6 +1,8 @@
 package acme.features.manager.task;
 
 
+import java.util.Calendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -100,7 +102,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
 		}
 			
-		
+		if(!errors.hasErrors("start_date") && !errors.hasErrors("end_date")) {
+			errors.state(request, Calendar.getInstance().toInstant().isBefore(entity.getStart_date().toInstant()), "start_date", "manager.task.form.future", "");
+			errors.state(request, Calendar.getInstance().toInstant().isBefore(entity.getEnd_date().toInstant()), "end_date", "manager.task.form.future", "");
+		}
 		
 	}
 
