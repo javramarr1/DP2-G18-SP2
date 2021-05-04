@@ -176,7 +176,7 @@
 	</bean>
 	
 	<bean id="task08" class="acme.entities.tasks.Task">
-		<property name="start_date" value="2021/05/05 00:00"/>
+		<property name="start_date" value="2021/05/04 23:00"/>
 		<property name="end_date" value="2021/05/05 02:00"/>
 		<property name="workload" value="1.50"/>
 		<property name="title" value="Texample"/>
@@ -221,8 +221,8 @@
 	</bean>
 	
 	<bean id="task12" class="acme.entities.tasks.Task">
-		<property name="start_date" value="2021/04/03 00:00"/>
-		<property name="end_date" value="2021/04/07 02:00"/>
+		<property name="start_date" value="2021/05/05 00:00"/>
+		<property name="end_date" value="2021/05/05 02:00"/>
 		<property name="workload" value="0.01"/>
 		<property name="title" value="Texample"/>
 		<property name="is_private" value="false"/>
