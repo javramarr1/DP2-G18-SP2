@@ -96,7 +96,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
 		}
 			
-		if(entity.getWorkload() != null){
+		if(!errors.hasErrors("workload")){
 	        final String doubleAsString = String.valueOf(entity.getWorkload());
 	        final int indexOfDecimal = doubleAsString.indexOf(".");
 	        final boolean less60 = 60 >= Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
