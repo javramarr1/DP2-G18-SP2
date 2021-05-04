@@ -9,7 +9,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Digits;
-import javax.validation.constraints.Future;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -47,12 +46,10 @@ public class Task extends DomainEntity{
 		protected String description;
 		
 		@Temporal(TemporalType.TIMESTAMP)
-		@Future
 		@NotNull
 		protected Date start_date;
 		
 		@Temporal(TemporalType.TIMESTAMP)
-		@Future
 		@NotNull
 		protected Date end_date;
 		
