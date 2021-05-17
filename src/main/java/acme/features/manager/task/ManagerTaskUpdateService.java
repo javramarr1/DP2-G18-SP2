@@ -1,5 +1,7 @@
 package acme.features.manager.task;
 
+import java.util.Calendar;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -82,26 +84,33 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert entity != null;
 		assert errors != null;
 		
-		if (entity.getStart_date() != null && entity.getEnd_date() !=null) {
-			errors.state(request, entity.okDates(), "start_date","manager.task.form.label.datesError", "");	
+		if(!errors.hasErrors("workload")){
+	        final String doubleAsString = String.valueOf(entity.getWorkload()) + "0";
+	        final int indexOfDecimal = doubleAsString.indexOf(".");
+	        final Long minutes = Long.valueOf(doubleAsString.substring(indexOfDecimal+1,indexOfDecimal+3));
+	        final boolean less60 = minutes <= 59;
+	        errors.state(request, less60, "workload", "manager.task.form.label.less60", "spam");
+	    }
+		
+		if (!errors.hasErrors("start_date") && !errors.hasErrors("end_date") ) {
+			errors.state(request, entity.okDates(), "start_date","manager.task.form.label.datesError", "");
+			errors.state(request, Calendar.getInstance().toInstant().isBefore(entity.getStart_date().toInstant()), "start_date", "manager.task.form.future", "");
+			errors.state(request, Calendar.getInstance().toInstant().isBefore(entity.getEnd_date().toInstant()), "end_date", "manager.task.form.future", "");
 		}
 		
-		if (entity.getWorkload() != null && entity.getStart_date() != null && entity.getEnd_date() !=null) {
-			errors.state(request, entity.itFits(), "workload","manager.task.form.label.workloadError", "");			
+		if (!errors.hasErrors("workload") && !errors.hasErrors("start_date") && !errors.hasErrors("end_date")) {
+			errors.state(request, entity.itFits(), "workload","manager.task.form.label.workloadError", "");
 		}
 		
-		if (entity.getTitle() != null && entity.getDescription() != null && entity.getOp_link()!= null) {
+		if(!errors.hasErrors("title") && !errors.hasErrors("description")) {
 			errors.state(request, this.spamService.validateNoSpam(entity.getTitle()), "title", "manager.task.form.label.spam", "spam");
 			errors.state(request, this.spamService.validateNoSpam(entity.getDescription()), "description", "manager.task.form.label.spam", "spam");
+		}
+		
+		if(!errors.hasErrors("op_link") && entity.getOp_link() != "" && entity.getOp_link() != null) {
 			errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
 		}
 			
-		if(!errors.hasErrors("workload")){
-	        final String doubleAsString = String.valueOf(entity.getWorkload());
-	        final int indexOfDecimal = doubleAsString.indexOf(".");
-	        final boolean less60 = 60 >= Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
-	        errors.state(request, less60, "workload", "manager.task.form.label.less60", "spam");
-	    }
 	}
 
 	@Override
