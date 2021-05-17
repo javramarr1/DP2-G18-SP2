@@ -22,6 +22,6 @@ manager.task.form.button.delete=Borrar
 manager.task.form.label.spam = Por favor, no incluya spam en las tareas
 manager.task.form.label.workloadError = La carga de trabajo debe encajar entre las dos fechas
 manager.task.form.label.datesError = La fecha de inicio debe ser anterior a la fecha de fin
-manager.task.form.label.less60 = En caso de ser más de 60 minutos necesita añadir una hora primero
+manager.task.form.label.less60 = En caso de ser más de 59 minutos necesita añadir una hora primero
 manager.task.form.label.less01 = No puedes añadir segundos
 manager.task.form.future = Las tareas deben ser creadas en futuro

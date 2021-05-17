@@ -16,7 +16,7 @@ public interface ManagerTaskRepository extends AbstractRepository{
 	@Query("select t from Task t where t.end_date >= ?1 order by t.workload ")
 	Collection<Task> findNonFinishedTask(Date end);
 	
-	@Query("select t from Task t where t.end_date >= ?1 and (t.manager.id = ?2 or t.is_private = 0) order by t.workload ")
+	@Query("select t from Task t where t.end_date >= ?1 and (t.manager.id = ?2) order by t.workload ")
 	Collection<Task> findNonFinishedTaskByManagerId(Date end, int id);
 	
 	@Query("select t from Task t where t.id = ?1")

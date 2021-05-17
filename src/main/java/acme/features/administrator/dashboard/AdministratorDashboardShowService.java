@@ -52,32 +52,31 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 	}
 	
 	public String parsenumExecutions(final String s) {
-		String res = "";
 		final String[] trozo =s.split(",");
+		final StringBuilder bld = new StringBuilder();
 		for (int i = 0; i < trozo.length; i++) {
 			final String parte = trozo[i];
 			
 			if (i == trozo.length-1) {
-				res += parte + " dd. ";
-				
+				bld.append( parte + " dd. ");
 			}else {
-				res += parte + " dd, ";
+				bld.append( parte + " dd, ");
 			}
 			
 			
 		}
 		
-		return res;
+		return bld.toString();
 	}
 	
 	public String parseWorkload(final String s) {
-		String res = "";
 		final String[] trozo =s.split(",");
+		final StringBuilder bld = new StringBuilder();
 		for (int i = 0; i < trozo.length; i++) {
 			final String parte = trozo[i];
 			final int indexOfDecimal = parte.indexOf(".");
-			long horas = Long.valueOf(parte.substring(0, indexOfDecimal));
-			long minutos = Long.valueOf(parte.substring(indexOfDecimal+1));
+			long horas = Long.parseLong(parte.substring(0, indexOfDecimal));
+			long minutos = Long.parseLong(parte.substring(indexOfDecimal+1));
 			
 			if (minutos>=60) {
 				minutos = minutos-60;
@@ -85,15 +84,15 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			}
 			
 			if (i == trozo.length-1) {
-				res += horas + " hrs. y " + minutos + " min. ";
+				bld.append(horas + " hrs. y " + minutos + " min. ");
 			}else {
-				res += horas + " hrs. y " + minutos + " min, ";
+				bld.append(horas + " hrs. y " + minutos + " min, ");
 			}
 			
 			
 		}
 		
-		return res;
+		return bld.toString();
 	}
 
 	@Override

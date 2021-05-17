@@ -82,11 +82,10 @@ public class Task extends DomainEntity{
 			
 			final long diff = Math.abs(duration.toMinutes());
 			
-			final String doubleAsString = String.valueOf(this.workload);
+			final String doubleAsString = String.valueOf(this.workload) + "0";
 			final int indexOfDecimal = doubleAsString.indexOf(".");
-						
-			final long wld = 60 * Long.valueOf(doubleAsString.substring(0, indexOfDecimal)) + Long.valueOf(doubleAsString.substring(indexOfDecimal+1));
-			
+			System.out.println(doubleAsString);			
+			final long wld = 60 * Long.valueOf(doubleAsString.substring(0, indexOfDecimal)) + Long.valueOf(doubleAsString.substring(indexOfDecimal+1,indexOfDecimal+3));
 			
 			if(wld <= diff) { return true;} else { return false;}
 		}
