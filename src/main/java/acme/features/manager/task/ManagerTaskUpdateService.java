@@ -107,7 +107,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			errors.state(request, this.spamService.validateNoSpam(entity.getDescription()), "description", "manager.task.form.label.spam", "spam");
 		}
 		
-		if(!errors.hasErrors("op_link") && entity.getOp_link() != "" && entity.getOp_link() != null) {
+		if(!errors.hasErrors("op_link") && !entity.getOp_link().equals("")) {
 			errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
 		}
 			
