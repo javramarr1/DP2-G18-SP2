@@ -19,10 +19,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<name>Acme Planner</name>
-	<description>D02 Acme Planner</description>
+	<description>This is the Acme Planner </description>
 
 	<artifactId>Acme-Planner</artifactId>
-	<version>21.2</version>
+	<version>21.4</version>
 	<packaging>war</packaging>
 
 	<parent>
@@ -82,10 +82,7 @@
 					<deployables>
 						<deployable>
 							<properties>
-								<Context antiResourceLocking="false" privileged="true" >
-    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
-         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
-</Context>
+								<context>/</context>
 							</properties>
 						</deployable>
 					</deployables>
@@ -182,9 +179,14 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
+			<!-- <scope>runtime</scope> -->
 		</dependency>
 		
+		<dependency>
+	    	<groupId>com.zaxxer</groupId>
+	        <artifactId>HikariCP</artifactId>	        
+	    </dependency>
+	    
 		<!-- Testing -->
 
 		<dependency>
