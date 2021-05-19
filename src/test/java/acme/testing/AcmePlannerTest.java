@@ -44,13 +44,12 @@ public class AcmePlannerTest  extends AcmeTest{
 		super.checkSimplePath("/master/welcome");
 	}
 
-	protected void signUp(final String username, final String password, final String name, final String surname, final String email, final String phone) {
+	protected void signUp(final String username, final String password, final String name, final String surname, final String email) {
 		assert !StringHelper.isBlank(username);
 		assert !StringHelper.isBlank(password);
 		assert !StringHelper.isBlank(name);
 		assert !StringHelper.isBlank(surname);
 		assert !StringHelper.isBlank(email);
-		// phone is nullable
 
 		super.navigateHome();
 		super.clickOnMenu("Sign up", null);	
@@ -60,10 +59,25 @@ public class AcmePlannerTest  extends AcmeTest{
 		super.fillInputBoxIn("identity.name", name);
 		super.fillInputBoxIn("identity.surname", surname);
 		super.fillInputBoxIn("identity.email", email);
-		super.fillInputBoxIn("identity.phone", phone);
 		super.fillInputBoxIn("accept", "true");
 		super.clickOnSubmitButton("Sign up");
 		super.checkSimplePath("/master/welcome");
+	}
+	
+	protected void signUpNegative(final String username, final String password, final String name, final String surname, final String email) {
+
+
+		super.navigateHome();
+		super.clickOnMenu("Sign up", null);	
+		super.fillInputBoxIn("username", username);
+		super.fillInputBoxIn("password", password);
+		super.fillInputBoxIn("confirmation", password);
+		super.fillInputBoxIn("identity.name", name);
+		super.fillInputBoxIn("identity.surname", surname);
+		super.fillInputBoxIn("identity.email", email);
+		super.fillInputBoxIn("accept", "true");
+		super.clickOnSubmitButton("Sign up");
+		super.checkErrorsExist();
 	}
 
 
