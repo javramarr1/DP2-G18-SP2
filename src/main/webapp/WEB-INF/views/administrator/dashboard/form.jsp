@@ -19,7 +19,7 @@
 	<acme:message code="administrator.dashboard.form.title.general-indicators"/>
 </h2>
 
-<table class="table table-sm" aria-describedby="Table of diferent parametres of the webpage for administrator">
+<table class="table table-sm" aria-describedby="Table of diferent parametres of the webpage for administrator" id="dashboard">
 	<tr>
 		<th scope="row">
 			<acme:message code="administrator.dashboard.form.label.num-private-task"/>
