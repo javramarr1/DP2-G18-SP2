@@ -14,7 +14,6 @@ public class AdministratorSpamUpdateTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "List spam words");		
-		super.checkColumnHasValue(recordIndex, 0, word);
 		super.clickOnListingRecord(recordIndex);
 		super.fillInputBoxIn("word", word);	
 		super.clickOnSubmitButton("Update");
@@ -24,6 +23,18 @@ public class AdministratorSpamUpdateTest extends AcmePlannerTest {
 		super.signOut();
 	}
 	
-
+	@ParameterizedTest
+	@CsvFileSource(resources = "/administrator/spam/update-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)	
+	public void updateNegative(final int recordIndex, final String word) {
+		super.signIn("administrator", "administrator");
+		
+		super.clickOnMenu("Administrator", "List spam words");		
+		super.clickOnListingRecord(recordIndex);
+		super.fillInputBoxIn("word", word);	
+		super.clickOnSubmitButton("Update");
+		super.checkErrorsExist();
+		super.signOut();
+	}
 
 }
