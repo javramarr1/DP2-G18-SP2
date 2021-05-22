@@ -14,30 +14,30 @@ public class AdministratorSpamCreateTest extends AcmePlannerTest {
 	public void createPositive(final int recordIndex,final String word ) {
 		assert !StringHelper.isBlank(word);		
 		super.signIn("administrator", "administrator");
+		
 		super.clickOnMenu("Administrator", "Create spam word");
-
 		super.fillInputBoxIn("word", word);
 		super.clickOnSubmitButton("Create");
 
 		super.clickOnMenu("Administrator", "List spam words");
-
-		super.checkColumnHasValue(recordIndex, 10, word);
-		super.checkColumnHasValue(recordIndex, 11, word);
-		super.checkColumnHasValue(recordIndex, 12, word);
-		super.checkColumnHasValue(recordIndex, 13, word);
+		super.checkColumnHasValue(recordIndex, 0, word);
+		super.clickOnListingRecord(recordIndex);
+		super.checkInputBoxHasValue("word", word);
+		
+		super.signOut();
 	}
 	
 	@ParameterizedTest
 	@CsvFileSource(resources = "/administrator/spam/create-negative.csv", encoding = "utf-8", numLinesToSkip = 1)
-	@Order(10)
+	@Order(20)
 	public void createNegative(final int recordIndex,final String word ) {
-		assert !StringHelper.isBlank(word);		
 		super.signIn("administrator", "administrator");
 		super.clickOnMenu("Administrator", "Create spam word");
 
 		super.fillInputBoxIn("word", word);
 		super.clickOnSubmitButton("Create");
-
 		super.checkErrorsExist();
+		
+		super.signOut();
 	}
 }
