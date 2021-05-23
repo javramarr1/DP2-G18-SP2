@@ -15,7 +15,9 @@ public class AdministratorSpamListTest extends AcmePlannerTest {
 		super.clickOnMenu("Administrator", "List spam words");
 		
 		super.checkColumnHasValue(recordIndex, 0, word);
-
+		super.clickOnListingRecord(recordIndex);
+		super.checkInputBoxHasValue("word", word);
+		super.signOut();
 	}
 
 }
