@@ -1,0 +1,4 @@
+recordIndex,title,description,start_date,end_date,workload,op_link,is_private
+6,Zolita,This is a description,2022/10/18 00:00,2022/10/18 12:00,11.20,https://google.es/,true
+7,Zadios,This is a description2,2022/11/19 00:00,2022/11/19 12:00,11.30,https://google.es/,true
+8,ZBuenas Tardes,This is a description3,2022/12/20 00:00,2022/12/20 12:00,11.40,,true
