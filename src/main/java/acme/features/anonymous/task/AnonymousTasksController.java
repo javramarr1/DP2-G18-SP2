@@ -14,9 +14,6 @@ import acme.framework.entities.Anonymous;
 @Controller
 @RequestMapping("/anonymous/task")
 public class AnonymousTasksController extends AbstractController<Anonymous, Task>{
-	
-		@Autowired
-		protected AnonymousTaskCreateService createService;
 		
 		@Autowired
 		protected AnonymousTaskListService	listService;
@@ -27,7 +24,6 @@ public class AnonymousTasksController extends AbstractController<Anonymous, Task
 		@PostConstruct
 		protected void initialise() {
 			super.addBasicCommand(BasicCommand.LIST, this.listService);
-			super.addBasicCommand(BasicCommand.CREATE, this.createService);
 			super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		}
 }
