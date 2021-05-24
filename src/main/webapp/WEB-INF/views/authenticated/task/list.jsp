@@ -7,5 +7,6 @@
 	<acme:list-column code="authenticated.task.list.label.title" path="title" width="20%"/>
 	<acme:list-column code="authenticated.task.list.label.start_date" path="start_date" width="20%"/>
 	<acme:list-column code="authenticated.task.list.label.end_date" path="end_date" width="20%"/>
-	<acme:list-column code="authenticated.task.list.label.workload" path="workload" width="40%"/>	
+	<acme:list-column code="authenticated.task.list.label.workload" path="workload" width="40%"/>
+	<acme:list-column code="authenticated.task.list.label.op_url" path="op_link" width="20%"/>
 </acme:list>

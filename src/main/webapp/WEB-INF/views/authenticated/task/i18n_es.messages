@@ -4,6 +4,8 @@ authenticated.task.list.label.title=Título
 authenticated.task.list.label.start_date= Fecha inicio:
 authenticated.task.list.label.end_date= Fecha final:
 authenticated.task.list.label.workload=Acumulacion de Trabajo
+authenticated.task.list.label.op_url=Link
+
 
 authenticated.task.form.label.title = Titulo:
 authenticated.task.form.label.description = Descripción:

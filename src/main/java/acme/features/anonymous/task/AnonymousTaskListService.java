@@ -15,13 +15,13 @@ import acme.framework.services.AbstractListService;
 @Service
 public class AnonymousTaskListService implements AbstractListService<Anonymous, Task>{
 	
-	// Internal state
+	
 
 		@Autowired
 		protected AnonymousTaskRepository repository;
 
 
-		// AbstractListService<Administrator, Task> interface 
+		
 
 		@Override
 		public boolean authorise(final Request<Task> request) {
@@ -36,7 +36,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 			assert entity != null;
 			assert model != null;
 
-			request.unbind(entity, model, "title", "start_date", "end_date", "workload");
+			request.unbind(entity, model, "title", "start_date", "end_date", "workload","op_link");
 		}
 
 		@Override
@@ -45,7 +45,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 
 			final Collection<Task> result;
 			Calendar  calendar;
-			calendar=Calendar.getInstance();   //get the Calendar
+			calendar=Calendar.getInstance();   
 			
 
 			result = this.repository.findNonFinishedTaskAndPublic(calendar.getTime());

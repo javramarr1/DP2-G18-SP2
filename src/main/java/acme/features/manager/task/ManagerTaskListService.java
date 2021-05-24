@@ -49,7 +49,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			principal = request.getPrincipal();
 
 			Calendar  calendar;
-			calendar=Calendar.getInstance();   //get the Calendar
+			calendar=Calendar.getInstance();   
 
 			result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getActiveRoleId());
 			
