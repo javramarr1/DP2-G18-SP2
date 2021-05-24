@@ -33,7 +33,7 @@ public class AuthenticatedListTaskTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("start_date", start_date);
 		super.checkInputBoxHasValue("end_date", end_date);
 		super.checkInputBoxHasValue("workload", workload);
-		super.checkInputBoxHasValue("op_url", op_link);
+		super.checkInputBoxHasValue("op_link", op_link);
 
 
 	}

@@ -10,7 +10,7 @@
 	<acme:form-moment code="authenticated.task.form.label.start_date" path="start_date"/>
 	<acme:form-moment code="authenticated.task.form.label.end_date" path="end_date"/>
 	<acme:form-double code="authenticated.task.form.label.workload" path="workload"/>
-	<acme:form-textbox code="authenticated.task.form.label.op_url" path="op_url"/>
+	<acme:form-textbox code="authenticated.task.form.label.op_url" path="op_link"/>
 
 	
   	<acme:form-return code="authenticated.task.form.button.return"/>

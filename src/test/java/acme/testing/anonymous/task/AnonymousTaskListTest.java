@@ -30,7 +30,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("start_date", start_date);
 		super.checkInputBoxHasValue("end_date", end_date);
 		super.checkInputBoxHasValue("workload", workload);
-		super.checkInputBoxHasValue("op_url", op_link);
+		super.checkInputBoxHasValue("op_link", op_link);
 		super.checkInputBoxHasValue("is_private", is_private);
 
 
