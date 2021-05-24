@@ -231,6 +231,50 @@
 		<property name="manager" ref="managerManager" />
 	</bean>
 	
+	<bean id="task13" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/06/10 00:00"/>
+		<property name="end_date" value="2021/11/05 02:00"/>
+		<property name="workload" value="20.30"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+		<property name="manager" ref="managerManager" />
+	</bean>
+	
+		<bean id="task14" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/07/10 11:00"/>
+		<property name="end_date" value="2021/11/05 09:30"/>
+		<property name="workload" value="30.10"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+		<property name="manager" ref="managerManager" />
+	</bean>
+	
+		<bean id="task15" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/08/16 00:00"/>
+		<property name="end_date" value="2021/12/18 00:00"/>
+		<property name="workload" value="15.30"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+		<property name="manager" ref="managerManager" />
+	</bean>
+	
+		<bean id="task16" class="acme.entities.tasks.Task">
+		<property name="start_date" value="2021/06/04 12:00"/>
+		<property name="end_date" value="2021/12/20 06:00"/>
+		<property name="workload" value="60.30"/>
+		<property name="title" value="Texample"/>
+		<property name="is_private" value="false"/>
+		<property name="description" value="Hi just trying tasks"/>
+		<property name="op_link" value="http://1happybirthday.com"/>
+		<property name="manager" ref="managerManager" />
+	</bean>
+	
 	<bean id="spam01" class="acme.entities.spam.Spam">
 		<property name="word" value="sex"/>
 	</bean>
