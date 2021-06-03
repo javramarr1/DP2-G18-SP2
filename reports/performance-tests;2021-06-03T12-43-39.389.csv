@@ -1,2 +1,0 @@
-timestamp,test-class,test-method,time,description,result
-2021-06-03 12:43:55.814,acme.testing.administrator.spam.AdministratorThresholdListTest,listAll,5542,"[1] recordIndex=0, threshold=10.00",OK
