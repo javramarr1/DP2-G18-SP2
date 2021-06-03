@@ -1,9 +1,9 @@
-package acme.features.spam;
+package acme.features.administrator.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Spam;
+import acme.entities.configuration.Spam;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -11,12 +11,12 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
+public class AdministratorConfigurationSpamUpdateService implements AbstractUpdateService<Administrator, Spam> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SpamRepository repository;
+	protected AdministratorConfigurationRepository repository;
 
 	protected SpamService spamService;
 	// AbstractUpdateService<Administrator, Spam> interface -------------

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
-import acme.features.spam.SpamService;
+import acme.features.administrator.configuration.SpamService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -82,7 +82,7 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	        final int indexOfDecimal = doubleAsString.indexOf(".");
 	        final Long minutes = Long.valueOf(doubleAsString.substring(indexOfDecimal+1,indexOfDecimal+3));
 	        final boolean less60 = minutes <= 59;
-	        errors.state(request, less60, "workload", "manager.task.form.label.less60", "spam");
+	        errors.state(request, less60, "workload", "manager.task.form.label.less60", "");
 	    }
 		
 		if (!errors.hasErrors("start_date") && !errors.hasErrors("end_date") ) {
@@ -95,12 +95,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, entity.itFits(), "workload","manager.task.form.label.workloadError", "");
 		}
 		
-		if(!errors.hasErrors("title") && !errors.hasErrors("description")) {
-			errors.state(request, this.spamService.validateNoSpam(entity.getTitle()), "title", "manager.task.form.label.spam", "spam");
-			errors.state(request, this.spamService.validateNoSpam(entity.getDescription()), "description", "manager.task.form.label.spam", "spam");
-		}
-		
-		if(!errors.hasErrors("op_link") && !entity.getOp_link().equals("")) {
+		errors.state(request, this.spamService.validateNoSpam(entity.getTitle()), "title", "manager.task.form.label.spam", "spam");
+		errors.state(request, this.spamService.validateNoSpam(entity.getDescription()), "description", "manager.task.form.label.spam", "spam");
+			
+		if(!errors.hasErrors("op_link")) {
 			errors.state(request, this.spamService.validateNoSpam(entity.getOp_link()), "op_link", "manager.task.form.label.spam", "spam");
 		}
 			
