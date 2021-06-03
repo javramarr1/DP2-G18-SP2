@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import acme.framework.entities.UserAccountStatus;
 import acme.testing.AcmePlannerTest;
 
 public class AdministratorUserAccountsUpdateTest extends AcmePlannerTest{
@@ -36,7 +37,13 @@ public class AdministratorUserAccountsUpdateTest extends AcmePlannerTest{
 		super.checkInputBoxHasValue("identity.name", name);
 		super.checkInputBoxHasValue("identity.surname", surname);
 		super.checkInputBoxHasValue("identity.email", email);
-		super.checkInputBoxHasValue("status", newStatus);
+		if(newStatus.equals(UserAccountStatus.KEEP.toString())) {
+			super.checkInputBoxHasValue("status", status);
+			
+			
+		}else {
+			super.checkInputBoxHasValue("status", newStatus);
+		}
 	}
 
 }
