@@ -1,28 +1,31 @@
-package acme.features.spam;
-
+package acme.features.administrator.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Spam;
+import acme.entities.configuration.Configuration;
+import acme.entities.configuration.Spam;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
-import acme.framework.services.AbstractCreateService;
+import acme.framework.services.AbstractDeleteService;
 
 @Service
-public class AdministratorSpamCreateService implements AbstractCreateService<Administrator, Spam>{
+public class AdministratorConfigurationSpamDeleteService implements AbstractDeleteService<Administrator, Spam> {
+
+	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SpamRepository repository;
-	
-	protected SpamService spamService;
-	
+	protected AdministratorConfigurationRepository repository;
+
+	// AbstractDeleteService<Administrator, Spam> interface -------------------------
+
+
 	@Override
 	public boolean authorise(final Request<Spam> request) {
 		assert request != null;
-
+		
 		return true;
 	}
 
@@ -45,14 +48,15 @@ public class AdministratorSpamCreateService implements AbstractCreateService<Adm
 	}
 
 	@Override
-	public Spam instantiate(final Request<Spam> request) {
+	public Spam findOne(final Request<Spam> request) {
 		assert request != null;
-		
-		Spam result;
 
-		result = new Spam();
-		result.setWord(null);
-		
+		Spam result;
+		int id;
+
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneSpamById(id);
+
 		return result;
 	}
 
@@ -61,22 +65,17 @@ public class AdministratorSpamCreateService implements AbstractCreateService<Adm
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		
-		if (!errors.hasErrors("spam")) {
-            Spam existing;
-            existing = this.repository.findOneSpamByName(entity.getWord());
-            errors.state(request, existing == null, "word", "administrator.spam.form.label.duplicate", "word");
-        }
-		
 	}
 
 	@Override
-	public void create(final Request<Spam> request, final Spam entity) {
+	public void delete(final Request<Spam> request, final Spam entity) {
 		assert request != null;
 		assert entity != null;
 		
-		this.repository.save(entity);
-		
+		final Configuration c = this.repository.findAllConfigurations().get(0);
+		c.getSpamList().remove(entity);
+
+		this.repository.delete(entity);
 	}
-	
+
 }

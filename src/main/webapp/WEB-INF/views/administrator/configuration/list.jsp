@@ -6,5 +6,3 @@
 <acme:list>
 	<acme:list-column code="administrator.threshold.list.label.threshold" path="threshold"/>	
 </acme:list>
-
-

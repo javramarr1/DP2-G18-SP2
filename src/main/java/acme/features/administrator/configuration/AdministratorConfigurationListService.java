@@ -1,37 +1,36 @@
-package acme.features.administrator.threshold;
+package acme.features.administrator.configuration;
 
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Threshold;
-import acme.features.spam.SpamRepository;
+import acme.entities.configuration.Configuration;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AdministratorThresholdListService implements AbstractListService<Administrator, Threshold>{
+public class AdministratorConfigurationListService implements AbstractListService<Administrator, Configuration>{
 	
 	// Internal state
 
 		@Autowired
-		protected SpamRepository repository;
+		protected AdministratorConfigurationRepository repository;
 
 
 		// AbstractListService<Administrator, Threshold> interface 
 
 		@Override
-		public boolean authorise(final Request<Threshold> request) {
+		public boolean authorise(final Request<Configuration> request) {
 			assert request != null;
 
 			return true;
 		}
 
 		@Override
-		public void unbind(final Request<Threshold> request, final Threshold entity, final Model model) {
+		public void unbind(final Request<Configuration> request, final Configuration entity, final Model model) {
 			assert request != null;
 			assert entity != null;
 			assert model != null;
@@ -40,12 +39,12 @@ public class AdministratorThresholdListService implements AbstractListService<Ad
 		}
 
 		@Override
-		public Collection<Threshold> findMany(final Request<Threshold> request) {
+		public Collection<Configuration> findMany(final Request<Configuration> request) {
 			assert request != null;
 
-			final Collection<Threshold> result;
+			final Collection<Configuration> result;
 
-			result = this.repository.findAllThreshold();
+			result = this.repository.findAllConfigurations();
 			
 			return result;
 		}

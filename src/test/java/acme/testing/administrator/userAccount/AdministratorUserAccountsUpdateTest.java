@@ -1,4 +1,4 @@
-package acme.testing.adminsistrator.userAccount;
+package acme.testing.administrator.userAccount;
 
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.params.ParameterizedTest;

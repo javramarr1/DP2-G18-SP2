@@ -1,14 +1,3 @@
-/*
- * AbstractTest.java
- *
- * Copyright (C) 2012-2021 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
 package acme.framework.testing;
 
@@ -306,23 +295,17 @@ public abstract class AbstractTest {
 	// Navigation methods -----------------------------------------------------
 
 	protected void navigateHome() {
-		this.navigate(() -> {
-			this.driver.get(this.homeUrl);
-			this.longSleep();
-		});
+		this.navigate(() -> this.driver.get(this.homeUrl));
 	}
 
 	protected void navigate(final String path, final String query) {
 		assert this.isSimplePath(path);
 		assert this.isSimpleQuery(query);
 
-		this.navigate(() -> {
-			String url;
-
-			url = String.format("%s%s%s%s", this.baseUrl, path, this.contextQuery, query);
-			this.driver.get(url);
-			this.longSleep();
-		});
+		String url;
+		
+		url = String.format("%s%s%s%s", this.baseUrl, path, this.contextQuery, query);		
+		this.navigate(() -> this.driver.get(url));		
 	}
 
 	protected void navigate(final Runnable navigator) {
@@ -364,9 +347,9 @@ public abstract class AbstractTest {
 		assert element != null;
 
 		// INFO: WebElement::click is a nightmare.  Don't use it!
-		this.executor.executeScript("arguments[0].click();", element);
-		this.shortSleep();
+		this.executor.executeScript("arguments[0].click();", element);		
 		this.waitUntilComplete();
+		this.shortSleep();
 	}
 
 	protected void clickAndWait(final By locator) {
