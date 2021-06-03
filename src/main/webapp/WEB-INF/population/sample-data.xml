@@ -275,38 +275,52 @@
 		<property name="manager" ref="managerManager" />
 	</bean>
 	
-	<bean id="spam01" class="acme.entities.spam.Spam">
+	<bean id="spam01" class="acme.entities.configuration.Spam">
 		<property name="word" value="sex"/>
 	</bean>
-	<bean id="spam02" class="acme.entities.spam.Spam">
+	<bean id="spam02" class="acme.entities.configuration.Spam">
 		<property name="word" value="hard core"/>
 	</bean>
-	<bean id="spam03" class="acme.entities.spam.Spam">
+	<bean id="spam03" class="acme.entities.configuration.Spam">
 		<property name="word" value="viagra"/>
 	</bean>
-	<bean id="spam04" class="acme.entities.spam.Spam">
+	<bean id="spam04" class="acme.entities.configuration.Spam">
 		<property name="word" value="cialis"/>
 	</bean>
-	<bean id="spam05" class="acme.entities.spam.Spam">
+	<bean id="spam05" class="acme.entities.configuration.Spam">
 		<property name="word" value="nigeria"/>
 	</bean>
-	<bean id="spam06" class="acme.entities.spam.Spam">
+	<bean id="spam06" class="acme.entities.configuration.Spam">
 		<property name="word" value="you've won"/>
 	</bean>
-	<bean id="spam07" class="acme.entities.spam.Spam">
+	<bean id="spam07" class="acme.entities.configuration.Spam">
 		<property name="word" value="million dollar"/>
 	</bean>
-	<bean id="spam08" class="acme.entities.spam.Spam">
+	<bean id="spam08" class="acme.entities.configuration.Spam">
 		<property name="word" value="sexo"/>
 	</bean>
-	<bean id="spam09" class="acme.entities.spam.Spam">
+	<bean id="spam09" class="acme.entities.configuration.Spam">
 		<property name="word" value="has ganado"/>
 	</bean>
-	<bean id="spam10" class="acme.entities.spam.Spam">
+	<bean id="spam10" class="acme.entities.configuration.Spam">
 		<property name="word" value="millon de euros"/>
 	</bean>
 	
-	<bean id="threshold" class="acme.entities.spam.Threshold">
+	<bean id="configuration01" class="acme.entities.configuration.Configuration">
+		<property name="spamList">
+			<list>
+				<ref bean="spam01"/>
+				<ref bean="spam02"/>
+				<ref bean="spam03"/>
+				<ref bean="spam04"/>
+				<ref bean="spam05"/>
+				<ref bean="spam06"/>
+				<ref bean="spam07"/>
+				<ref bean="spam08"/>
+				<ref bean="spam09"/>
+				<ref bean="spam10"/>
+			</list>
+		</property>
 		<property name="threshold" value="10.00"/>
 	</bean>
 

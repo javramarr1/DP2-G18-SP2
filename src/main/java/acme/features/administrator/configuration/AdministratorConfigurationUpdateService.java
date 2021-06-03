@@ -1,10 +1,9 @@
-package acme.features.administrator.threshold;
+package acme.features.administrator.configuration;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.spam.Threshold;
-import acme.features.spam.SpamRepository;
+import acme.entities.configuration.Configuration;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -12,25 +11,25 @@ import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
-public class AdministratorThresholdUpdateService implements AbstractUpdateService<Administrator, Threshold> {
+public class AdministratorConfigurationUpdateService implements AbstractUpdateService<Administrator, Configuration> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SpamRepository repository;
+	protected AdministratorConfigurationRepository repository;
 
 	// AbstractUpdateService<Administrator, Threshold> interface -------------
 
 
 	@Override
-	public boolean authorise(final Request<Threshold> request) {
+	public boolean authorise(final Request<Configuration> request) {
 		assert request != null;
 		
 		return true;
 	}
 
 	@Override
-	public void bind(final Request<Threshold> request, final Threshold entity, final Errors errors) {
+	public void bind(final Request<Configuration> request, final Configuration entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -39,7 +38,7 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 	}
 
 	@Override
-	public void unbind(final Request<Threshold> request, final Threshold entity, final Model model) {
+	public void unbind(final Request<Configuration> request, final Configuration entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
@@ -48,27 +47,25 @@ public class AdministratorThresholdUpdateService implements AbstractUpdateServic
 	}
 
 	@Override
-	public Threshold findOne(final Request<Threshold> request) {
+	public Configuration findOne(final Request<Configuration> request) {
 		assert request != null;
 
-		Threshold result;
-		int id;
+		Configuration result;
 
-		id = request.getModel().getInteger("id");
-		result = this.repository.findOneThresholdById(id);
+		result = this.repository.findAllConfigurations().get(0);
 
 		return result;
 	}
 
 	@Override
-	public void validate(final Request<Threshold> request, final Threshold entity, final Errors errors) {
+	public void validate(final Request<Configuration> request, final Configuration entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
 	}
 
 	@Override
-	public void update(final Request<Threshold> request, final Threshold entity) {
+	public void update(final Request<Configuration> request, final Configuration entity) {
 		assert request != null;
 		assert entity != null;
 

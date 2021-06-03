@@ -14,11 +14,9 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam threshold");		
-		super.clickOnListingRecord(recordIndex);
 		super.fillInputBoxIn("threshold", threshold);	
 		super.clickOnSubmitButton("Update");
-		super.checkColumnHasValue(recordIndex, 0, threshold);
-		super.clickOnListingRecord(recordIndex);
+		super.clickOnMenu("Administrator", "Spam threshold");
 		super.checkInputBoxHasValue("threshold", threshold);
 		super.signOut();
 	}
@@ -30,7 +28,6 @@ public class AdministratorThresholdUpdateTest extends AcmePlannerTest {
 		super.signIn("administrator", "administrator");
 		
 		super.clickOnMenu("Administrator", "Spam threshold");		
-		super.clickOnListingRecord(recordIndex);
 		super.fillInputBoxIn("threshold", threshold);	
 		super.clickOnSubmitButton("Update");
 		super.checkErrorsExist();
