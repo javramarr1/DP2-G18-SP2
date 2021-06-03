@@ -31,7 +31,7 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.shout = Lista-Gritos
 master.menu.anonymous.shoutcreate=Grito!
-master.menu.anonymous.tasklist=Lista de Tareas
+master.menu.anonymous.tasklist=Lista de Tareas no finalizadas
 
 # master.menu.manager ##########################################################
 
@@ -66,7 +66,7 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 # master.menu.user-account ####################################################
 
-master.menu.authenticated.taskList= Lista tareas publicas
+master.menu.authenticated.taskList= Lista tareas publicas finalizadas
 master.menu.user-account = Cuenta
 master.menu.user-account.general-data = Datos generales
 master.menu.user-account.provider = Datos de proveedor

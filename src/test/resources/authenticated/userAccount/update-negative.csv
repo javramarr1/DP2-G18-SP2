@@ -1,5 +1,10 @@
-username, password, confirmation, name, surname, email
-maria@mail.com, 1234, 1234, maria, mary, maria@gmail.com
-maria@mail.com, 123456, 123456, , mary, maria@gmail.com
-maria@mail.com, 123456, 123456, maria, mary, maria
-maria@mail.com, 123456, 123465, maria, mary, maria@gmail.com
+username,password,confirmation,name,surname,email
+maria@mail.com,,,maria,mary,maria@gmail.com
+maria@mail.com,,123456,maria,mary,maria@gmail.com
+maria@mail.com,123456,,maria,mary,maria@gmail.com
+maria@mail.com,1234,1234,maria,,
+maria@mail.com,estoesunacotraseñaextremadamentelargaaaaaaaaaaaaaaaaaaaaaaaaa,estoesunacotraseñaextremadamentelargaaaaaaaaaaaaaaaaaaaaaaaaa,maria,mary,maria@gmail.com
+maria@mail.com,123456,123465,,mary,maria@mail.com
+maria@mail.com,123456,123456,maria,,maria@mail.com
+maria@mail.com,nuevacontrasena,nuevacontrasena,pedro,pedrito,
+maria@mail.com,contraseña,contraseña,alejandro,h,maria

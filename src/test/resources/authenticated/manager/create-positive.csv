@@ -1,2 +1,3 @@
-recordIndex,company,sector
-0,google,it
+recordIndex,username,pass,name,surname,email,company,sector
+0,maria,maria,maria,maria,maria@mail.com,us,comercial
+1,maria1,maria1,maria1,maria1,maria1@mail.com,h,h
