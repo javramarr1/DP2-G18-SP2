@@ -19,7 +19,7 @@ public class AuthenticatedListTaskTest extends AcmePlannerTest{
 		if(recordIndex==0)
 		super.signUp("maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com");
 		super.signIn("maria@mail.com", "maria@mail.com");
-		super.clickOnMenu("Authenticated user", "List public tasks");
+		super.clickOnMenu("Authenticated user", "List public finished tasks");
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, start_date);	

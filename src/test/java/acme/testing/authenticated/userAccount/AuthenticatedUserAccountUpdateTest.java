@@ -11,12 +11,13 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/userAccount/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(20)
-	public void updatePositive(final String username,
-		final String password,final String confirmation, 
+	public void updatePositive(final String username_registro,
+		final String password_registro, final String name_registro,final String surname_registro,
+		final String email_registro, final String password,final String confirmation, 
 		final String name,final String surname, final String email) 
 	{
-		super.signUp("maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com");
-		super.signIn("maria@mail.com", "maria@mail.com");
+		super.signUp(username_registro, password_registro, name_registro, surname_registro, email_registro);
+		super.signIn(username_registro, password_registro);
 		
 		super.clickOnMenu("Account", "General data");
 		
@@ -28,7 +29,7 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Update");
 		
 		super.clickOnMenu("Account", "General data");
-		super.checkInputBoxHasValue("username", username);
+		super.checkInputBoxHasValue("username", username_registro);
 		super.checkInputBoxHasValue("identity.name", name);
 		super.checkInputBoxHasValue("identity.surname", surname);
 		super.checkInputBoxHasValue("identity.email", email);
@@ -43,7 +44,7 @@ public class AuthenticatedUserAccountUpdateTest extends AcmePlannerTest{
 		final String password,final String confirmation, 
 		final String name,final String surname, final String email) 
 	{
-		super.signIn("maria@mail.com", "maria@mail.com");
+		super.signIn("maria@mail.com", "seisdi");
 		
 		super.clickOnMenu("Account", "General data");
 		

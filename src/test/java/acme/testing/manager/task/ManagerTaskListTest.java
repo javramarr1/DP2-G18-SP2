@@ -19,7 +19,6 @@ public class ManagerTaskListTest extends AcmePlannerTest {
 		assert !StringHelper.isBlank(start_date);	
 		assert !StringHelper.isBlank(end_date);	
 		assert !StringHelper.isBlank(workload);	
-		assert !StringHelper.isBlank(op_link);	
 		
 		super.signIn("manager", "manager");
 
@@ -37,6 +36,7 @@ public class ManagerTaskListTest extends AcmePlannerTest {
 		super.checkInputBoxHasValue("end_date", end_date);
 		super.checkInputBoxHasValue("workload", workload);
 		super.checkInputBoxHasValue("op_link", op_link);
+		
 		
 		super.signOut();
 	}

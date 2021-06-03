@@ -12,12 +12,13 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/manager/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex,final String company, final String sector) {
+	public void createPositive(final int recordIndex,final String username, final String pass, final String name, 
+		final String surname, final String email, final String company, final String sector) {
 		assert !StringHelper.isBlank(company);	
 		assert !StringHelper.isBlank(sector);	
 		
-		super.signUp("maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com");
-		super.signIn("maria@mail.com", "maria@mail.com");
+		super.signUp(username, pass,name,surname,email);
+		super.signIn(username,pass);
 		
 		super.clickOnMenu("Account", "Become a manager");
 		super.fillInputBoxIn("company", company);
@@ -25,8 +26,8 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Register");
 
 		super.clickOnMenu("Account", "Change data");
-		super.checkInputBoxHasValue("company", "google");
-		super.checkInputBoxHasValue("sector", "it");
+		super.checkInputBoxHasValue("company", company);
+		super.checkInputBoxHasValue("sector", sector);
 		
 		super.signOut();
 		
@@ -46,7 +47,6 @@ public class AuthenticatedManagerCreateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Register");
 
 		super.checkErrorsExist();
-		
 		super.signOut();
 		
 	}
