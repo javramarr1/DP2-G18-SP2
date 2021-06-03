@@ -16,6 +16,9 @@ import acme.framework.entities.Administrator;
 public class AdministratorConfigurationController extends AbstractController<Administrator, Configuration>{
 	
 	@Autowired
+	protected AdministratorConfigurationListService listService;
+	
+	@Autowired
 	protected AdministratorConfigurationShowService	showService;
 	
 	@Autowired
@@ -23,6 +26,7 @@ public class AdministratorConfigurationController extends AbstractController<Adm
 
 	@PostConstruct
 	protected void initialise() {
+		super.addBasicCommand(BasicCommand.LIST, this.listService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}

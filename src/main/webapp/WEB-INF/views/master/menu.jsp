@@ -46,7 +46,7 @@
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.spam.create" action="/administrator/spam/create"/>
 			<acme:menu-suboption code="master.menu.administrator.spam.list" action="/administrator/spam/list"/>
-			<acme:menu-suboption code="master.menu.administrator.spam.threshold" action="/administrator/configuration/update"/>
+			<acme:menu-suboption code="master.menu.administrator.spam.threshold" action="/administrator/configuration/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>

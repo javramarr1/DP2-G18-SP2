@@ -21,5 +21,9 @@
 	<definition name="administrator/configuration/form" extends="master">
 		<put-attribute name="body" type="template" value="../administrator/configuration/form.jsp" />
 	</definition>
+	
+		<definition name="administrator/configuration/list" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/configuration/list.jsp" />
+	</definition>
 
 </tiles-definitions>
