@@ -1,2 +1,6 @@
-username, password, confirmation, name, surname, email
-maria@mail.com, maria@mail.com, maria@mail.com, maria, mary, maria@mail.com
+username_registro,password_registro,name_registro,surname_registro,email_registro,password,confirmation,name,surname,email
+maria@mail.com,maria@mail.com,maria@mail.com,maria@mail.com,maria@mail.com,seisdi,seisdi,maria@mail.com,maria@mail.com,maria@mail.com
+hector@mail.com,hector@mail.com,hector@mail.com,hector@mail.com,hector@mail.com,estoesunacotraseñaextremadamentelargaaaaaaaaaaaaaaaaaaaaaaa,estoesunacotraseñaextremadamentelargaaaaaaaaaaaaaaaaaaaaaaa,nuevonombre,hector,h@mail.com
+alejandro,123456,alex,alex,alejandro@mail.com,123456,123456,alex,alex,alex@mail.com
+usuario1,contraseña,usuario1,usuario1,usuario@gmail.com,nuevapass,nuevapass,nuevonombre,j,user@mail.com
+nuevo,nuevapass,nombre,nombre,mail@mail.com,nuevapass,nuevapass,nuevonombre,apodo1,nuevo@mail.com

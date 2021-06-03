@@ -1,2 +1,4 @@
 recordIndex,username,name,surname,email,status,newStatus
 2,manager,Manager,Acme.com,manager01@acme.com,ENABLED,DISABLED
+2,manager,Manager,Acme.com,manager01@acme.com,DISABLED,KEEP
+2,manager,Manager,Acme.com,manager01@acme.com,DISABLED,ENABLED

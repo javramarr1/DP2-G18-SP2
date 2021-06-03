@@ -16,7 +16,7 @@ public class AnonymousTaskListTest extends AcmePlannerTest{
 		final String workload, final String description,
 		final String op_link, final String is_private) {	
 		
-		super.clickOnMenu("Anonymous", "List of Tasks");
+		super.clickOnMenu("Anonymous", "List unfinished tasks");
 		
 		super.checkColumnHasValue(recordIndex, 0, title);
 		super.checkColumnHasValue(recordIndex, 1, start_date);	

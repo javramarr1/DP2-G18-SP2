@@ -12,17 +12,11 @@ public class AuthenticatedManagerUpdateTest extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/authenticated/manager/update-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void updatePositive(final int recordIndex,final String company, final String sector) {
+	public void updatePositive(final int recordIndex, final String company, final String sector) {
 		assert !StringHelper.isBlank(company);	
 		assert !StringHelper.isBlank(sector);	
 		
-		super.signUp("maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com", "maria@mail.com");
-		super.signIn("maria@mail.com", "maria@mail.com");
-		
-		super.clickOnMenu("Account", "Become a manager");
-		super.fillInputBoxIn("company", "google");
-		super.fillInputBoxIn("sector", "it");
-		super.clickOnSubmitButton("Register");
+		super.signIn("manager", "manager");
 
 		super.clickOnMenu("Account", "Change data");
 		super.fillInputBoxIn("company", company);
@@ -30,8 +24,8 @@ public class AuthenticatedManagerUpdateTest extends AcmePlannerTest{
 		super.clickOnSubmitButton("Update");
 		
 		super.clickOnMenu("Account", "Change data");
-		super.checkInputBoxHasValue("company", "googleupd");
-		super.checkInputBoxHasValue("sector", "itupd");
+		super.checkInputBoxHasValue("company", company);
+		super.checkInputBoxHasValue("sector", sector);
 		
 		super.signOut();
 		
@@ -42,7 +36,7 @@ public class AuthenticatedManagerUpdateTest extends AcmePlannerTest{
 	@Order(10)
 	public void updateNegative(final int recordIndex,final String company, final String sector) {	
 		
-		super.signIn("maria@mail.com", "maria@mail.com");
+		super.signIn("manager", "manager");
 		
 		super.clickOnMenu("Account", "Change data");
 		super.fillInputBoxIn("company", company);
