@@ -1,6 +1,5 @@
-recordIndex,author,text,info
-5,ATH-01,Text 1,http://www.example.com
-6,ATH-02,Text 2,http://www.example.com
-7,ATH-03,Text 3,http://www.example.com
-8,ATH-04,viagra esto debería aceptar el spam porque supera el umbral predefinido,http://www.example.com
-9,ATH-05,Text 5,
+recordIndex,author,text,info,xxxCreationDate,xxxMoment,xxxMoney,flag
+5,ATH-01,Text 1,http://www.example.com,aaa-2021/06/09,2021/06/01 19:39,EUR 1.00,true
+6,ATH-02,Text 2,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+7,ATH-03,Text 3,,aaC-2021/06/09,2021/06/01 19:39,BTC 13.00,false
+8,ATH-04,viagra esto debería aceptar el spam porque supera el umbral predefinido,http://www.example.com,aVa-2021/06/09,2021/06/01 19:39,EUR 13.00,true

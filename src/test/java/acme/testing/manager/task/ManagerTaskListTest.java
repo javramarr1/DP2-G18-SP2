@@ -1,6 +1,7 @@
 package acme.testing.manager.task;
 
 import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
@@ -39,6 +40,17 @@ public class ManagerTaskListTest extends AcmePlannerTest {
 		
 		
 		super.signOut();
+	}
+	@Test
+	@Order(10)
+	public void negativeListShowTask() {
+		
+		super.signIn("manager", "manager");
+		super.signOut();
+		
+		super.navigate("/manager/task/list", null);
+		super.checkPanicExists();
+		
 	}
 	
 }

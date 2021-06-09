@@ -1,5 +1,7 @@
 package acme.features.anonymous.shout;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,7 +53,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "author", "text", "info");
+		request.unbind(entity, model, "author", "text", "info","xxx");
 	}
 
 	@Override
@@ -64,8 +66,7 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		moment = new Date(System.currentTimeMillis() - 1);
 
 		result = new Shout();
-		result.setMoment(moment);
-		
+		result.setMoment(moment);		
 
 		return result;
 	}
@@ -82,6 +83,29 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 		}
 		
 		if(entity.getInfo() != null)	errors.state(request, this.spamService.validateNoSpam(entity.getInfo()), "info", "anonymous.shout.form.label.spam", "spam");
+		
+		if(!errors.hasErrors("xxx.creationDate") && entity.getXxx().getCreationDate() != null) {
+			final String s = entity.getXxx().getCreationDate();
+			final String[] splitter = s.split("-");
+			final String stringDate = splitter[1].trim();
+			final String[] splitter2 = stringDate.split("/");
+			
+			final boolean correctDate = Integer.parseInt(splitter2[1])<=12&&Integer.parseInt(splitter2[2])<=31;
+			errors.state(request, correctDate, "xxx.creationDate", "anonymous.shout.form.dateFormat", "");
+			if(correctDate) {
+				final LocalDate date = LocalDate.parse(stringDate,DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+			
+				errors.state(request, date.isEqual(LocalDate.now()), "xxx.creationDate", "anonymous.shout.form.label.today", " ");
+			
+				errors.state(request, this.repository.numberOfShoutsByCreationDate(s).equals(0), "xxx.creationDate", "anonymous.shout.form.unique", " ");
+			}
+		}
+		
+		
+		if(!errors.hasErrors("xxx.money") && entity.getXxx().getMoney() != null) 
+			errors.state(request,
+				entity.getXxx().getMoney().getCurrency().equals("EUR")||entity.getXxx().getMoney().getCurrency().equals("USD"),
+				"xxx.money", "anonymous.shout.form.label.currency", "");
 	}
 
 	@Override
@@ -93,7 +117,9 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 
 		moment = new Date(System.currentTimeMillis() - 1);
 		entity.setMoment(moment);
+		this.repository.save(entity.getXxx());
 		this.repository.save(entity);
 	}
 
 }
+

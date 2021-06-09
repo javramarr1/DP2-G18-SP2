@@ -1,9 +1,14 @@
 recordIndex,title,description,start_date,end_date,workload,op_link,is_private
 0,,,,,,,false
-0,publico1,descripcion,2020/01/01 00:01,2020/01/01 00:00,-15,,false
+0,publico1,descripcion,2020/01/01 00:01,2020/01/01 00:00,-0.01,,false
 0,publico1,descripcion,2022/01/01 00:01,2020/01/01 00:00,-15,,false
 0,publico1,descripcion,2022/01/01 00:01,2022/01/01 00:00,15,,false
-0,publico1,,2022/01/01 00:00,2022/01/01 00:00,0.0,,false
+0,publico1,descripcion,2022/01/01 00:01,2022/01/01 00:00,72.01,http//www.example.com,false
+0,publico1,descripcion,2022/01/01 00:01,2022/01/04 00:00,70.00,hola,false
+0,publico1,estoesunadescripcionmuylargaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,2022/01/01 00:01,2022/01/04 00:00,70.00,http//www.example.com,true
+0,publico1,descripcion,2022/01/01 00:01,2022/01/04 00:00,70.00,http//www.example.com,false
+0,publico1,,2023/01/01 00:00,2023/01/01 00:00,0.0,http//www.example.com,false
 0,publico1,descripcion,2022/01/01 00:00,2022/01/01 00:00,0.01,,false
-0,publico1,,2022/01/01 00:00,2022/01/01 01:00,1.01,,false
+0,publico1,,2022/01/01 00:00,2022/01/01 01:00,1.01,http//www.example.com,false
+0,estoesuntitulomuylargoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo,descripcion,2022/01/01 00:00,2022/01/01 01:00,0.00,http//www.example.com,false
 0,,descripcion,2022/01/01 00:00,2022/01/01 01:00,1.00,,true

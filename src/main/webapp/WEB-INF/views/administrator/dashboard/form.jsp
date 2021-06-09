@@ -68,4 +68,56 @@
 			<acme:print value="${numWorkloads}"/>
 		</td>
 	</tr>		
+	
 </table>
+<table class="table table-sm" aria-describedby="Tabla de dashboard xxx" id="ratio">
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioShoutTrue"/>
+		</th>
+		<td>
+			<acme:print value="${ratioShoutsFlaggedTrue}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.ratioYear"/>
+		</th>
+		<td>
+			<acme:print value="${ratioShoutsYear2020}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageBTC"/>
+		</th>
+		<td>
+			<acme:print value="${averageXXXGroupByCurrency1}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.averageEUR"/>
+		</th>
+		<td>
+			<acme:print value="${averageXXXGroupByCurrency2}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationBTC"/>
+		</th>
+		<td>
+			<acme:print value="${deviationXXXGroupByCurrency1}"/>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">
+			<acme:message code="administrator.dashboard.form.label.deviationEUR"/>
+		</th>
+		<td>
+			<acme:print value="${deviationXXXGroupByCurrency2}"/>
+		</td>
+	</tr>
+</table>
+

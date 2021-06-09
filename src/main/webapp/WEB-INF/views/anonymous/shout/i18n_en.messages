@@ -6,6 +6,20 @@ anonymous.shout.form.label.info= Info:
 anonymous.shout.form.button.create = Shout!
 anonymous.shout.form.button.return = Return
 anonymous.shout.form.label.spam = Please don't shout spam
+
+anonymous.shout.form.label.currency = Only EUR and USD are accepted as currency
+anonymous.shout.form.label.creationDate = Creation date:
+anonymous.shout.form.label.today = Creation date does not match with today
+anonymous.shout.form.dateFormat = Value does not match with a valid date format
+anonymous.shout.form.unique = Creation date is not unique
+anonymous.shout.form.label.moment = Date date:
+anonymous.shout.form.label.money = Money:
+anonymous.shout.form.label.flag: Flag
+
+anonymous.shout.list.label.creationDate = Creation Date
+anonymous.shout.list.label.xxxMoment = Date date
+anonymous.shout.list.label.money = Money
+anonymous.shout.list.label.flag = Flag
  
 anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author

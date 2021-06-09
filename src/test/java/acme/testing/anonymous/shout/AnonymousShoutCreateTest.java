@@ -12,7 +12,8 @@ public class AnonymousShoutCreateTest  extends AcmePlannerTest{
 	@ParameterizedTest
 	@CsvFileSource(resources = "/anonymous/shout/create-positive.csv", encoding = "utf-8", numLinesToSkip = 1)
 	@Order(10)
-	public void createPositive(final int recordIndex,final String author,final String text,final String info ) {
+	public void createPositive(final int recordIndex,final String author,final String text,final String info,
+		final String xxxCreationDate, final String xxxMoment, final String xxxMoney, final String flag) {
 		assert !StringHelper.isBlank(author);		
 		assert !StringHelper.isBlank(text);	
 		
@@ -22,6 +23,10 @@ public class AnonymousShoutCreateTest  extends AcmePlannerTest{
 		super.fillInputBoxIn("author", author);
 		super.fillInputBoxIn("text", text);
 		super.fillInputBoxIn("info", info);
+		super.fillInputBoxIn("xxx.creationDate", xxxCreationDate);
+		super.fillInputBoxIn("xxx.moment", xxxMoment);
+		super.fillInputBoxIn("xxx.money", xxxMoney);
+		super.fillInputBoxIn("xxx.flag", flag);
 		super.clickOnSubmitButton("Shout!");
 
 		super.clickOnMenu("Anonymous", "List-Shout");
@@ -30,6 +35,10 @@ public class AnonymousShoutCreateTest  extends AcmePlannerTest{
 		super.checkColumnHasValue(recordIndex, 1, author);
 		super.checkColumnHasValue(recordIndex, 2, text);
 		super.checkColumnHasValue(recordIndex, 3, info);
+		super.checkColumnHasValue(recordIndex, 4, xxxCreationDate);
+		super.checkColumnHasValue(recordIndex, 5, xxxMoment);
+		super.checkColumnHasValue(recordIndex, 6, xxxMoney);
+		super.checkColumnHasValue(recordIndex, 7, flag);
 
 
 

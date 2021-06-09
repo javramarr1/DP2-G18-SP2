@@ -6,6 +6,20 @@ anonymous.shout.form.label.info= Info:
 anonymous.shout.form.button.create = Gritar
 anonymous.shout.form.button.return = Volver
 anonymous.shout.form.label.spam = Por favor no grite spam
+
+anonymous.shout.form.label.currency = Solo EUR y USD están aceptados como moneda
+anonymous.shout.form.label.creationDate = Fecha de creación:
+anonymous.shout.form.label.today = La fecha de creación no coincide con la de hoy
+anonymous.shout.form.dateFormat = El valor no coincide con un formato de fecha válido
+anonymous.shout.form.unique = La fecha de creación no es única
+anonymous.shout.form.label.moment = Fecha Date:
+anonymous.shout.form.label.money = Dinero:
+anonymous.shout.form.label.flag = Bandera
+
+anonymous.shout.list.label.creationDate = Fecha de creación
+anonymous.shout.list.label.xxxMoment = Fecha Date
+anonymous.shout.list.label.money = Dinero
+anonymous.shout.list.label.flag = Bandera
  
 anonymous.shout.list.label.moment = Momento
 anonymous.shout.list.label.author = Autor

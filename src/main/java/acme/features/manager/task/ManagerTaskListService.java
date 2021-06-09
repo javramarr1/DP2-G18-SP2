@@ -1,6 +1,5 @@
 package acme.features.manager.task;
 
-import java.util.Calendar;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,10 +47,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 			Principal principal;
 			principal = request.getPrincipal();
 
-			Calendar  calendar;
-			calendar=Calendar.getInstance();   
-
-			result = this.repository.findNonFinishedTaskByManagerId(calendar.getTime(), principal.getActiveRoleId());
+			result = this.repository.findManagerTask(principal.getActiveRoleId());
 			
 			return result;
 		}

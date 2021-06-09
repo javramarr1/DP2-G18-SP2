@@ -12,6 +12,8 @@
 
 package acme.features.administrator.dashboard;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -48,7 +50,9 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		request.unbind(entity, model, //
 			"numPrivateTask", "numPublicTask", // 
 			"numFinishedTask", "numCurrentTask", //
-			"numExecutions", "numWorkloads");
+			"numExecutions", "numWorkloads", "ratioShoutsFlaggedTrue","ratioShoutsYear2020",
+			"averageXXXGroupByCurrency1", "averageXXXGroupByCurrency2",
+			"deviationXXXGroupByCurrency1", "deviationXXXGroupByCurrency2");
 	}
 	
 	public String parsenumExecutions(final String s) {
@@ -107,6 +111,13 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		String numExecutions;
 		String numWorkloads;
 		
+		//DASHBOARD XXX
+		final Double ratioShoutsFlaggedTrue;
+		final Double ratioShoutsYear2020;
+		final Double averageXXXGroupByCurrency1;
+		final Double averageXXXGroupByCurrency2;
+		Double deviationXXXGroupByCurrency1;
+		Double deviationXXXGroupByCurrency2;
 
 		numPrivateTask = this.repository.numPrivateTask();
 		numPublicTask = this.repository.numPublicTask();
@@ -123,6 +134,25 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setNumCurrentTask(numCurrentTask);
 		result.setNumExecutions(this.parsenumExecutions(numExecutions));
 		result.setNumWorkloads(this.parseWorkload(numWorkloads));
+		
+		//DASHBOARD XXX
+		ratioShoutsFlaggedTrue = this.repository.ratioOfShoutsFlaggedTrue();
+		ratioShoutsYear2020 = this.repository.ratioOfShoutsYear2020();
+		
+		final List<Double> averageXXXGroupByCurrency = this.repository.averageXXXGroupByCurrency();
+		final List<Double> deviationXXXGroupByCurrency = this.repository.deviationXXXGroupByCurrency();
+		
+		averageXXXGroupByCurrency1 = averageXXXGroupByCurrency.get(0);
+		averageXXXGroupByCurrency2 =averageXXXGroupByCurrency.get(1);
+		deviationXXXGroupByCurrency1 = deviationXXXGroupByCurrency.get(0);
+		deviationXXXGroupByCurrency2 = deviationXXXGroupByCurrency.get(1);
+		
+		result.setRatioShoutsFlaggedTrue(ratioShoutsFlaggedTrue);
+		result.setRatioShoutsYear2020(ratioShoutsYear2020);
+		result.setAverageXXXGroupByCurrency1(averageXXXGroupByCurrency1);
+		result.setAverageXXXGroupByCurrency2(averageXXXGroupByCurrency2);
+		result.setDeviationXXXGroupByCurrency1(deviationXXXGroupByCurrency1);
+		result.setDeviationXXXGroupByCurrency2(deviationXXXGroupByCurrency2);
 		
 
 		return result;

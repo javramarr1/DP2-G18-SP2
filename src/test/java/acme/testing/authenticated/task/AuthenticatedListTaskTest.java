@@ -37,5 +37,27 @@ public class AuthenticatedListTaskTest extends AcmePlannerTest{
 
 
 	}
+	
+	@ParameterizedTest
+	@CsvFileSource(resources = "/authenticated/task/list.csv", encoding = "utf-8", numLinesToSkip = 1)
+	@Order(10)
+		public void negativeAuthenticatedListandShowTask(final int recordIndex, final String title, final String startMoment, final String endMoment,final String description ,final String workload,final String status,final String link, final String id) {
+			super.signIn("administrator", "administrator");
+			super.signOut();
+			final String path="/authenticated/task/list";
+			final String query=null;
+			
+			super.navigate(path, query);
+			
+			super.checkErrorsExist();
+			super.checkPanicExists();
+			
+			final String query2="id="+id;
+			final String path2="/authenticated/task/list/show";
+
+			super.navigate(path2, query2);
+			
+			super.checkPanicExists();
+	}
 
 }

@@ -1,8 +1,12 @@
-recordIndex,author,text,info
-0,,Text 1,http://www.example.com
-1,Alex,Text 2,http://www.example.com
-2,Alejandro Manuel Perez Arjona,nigeria no debería de tragarselo porque son nueve palabras,http://www.example.com
-3,ATH-02,,http://www.example.com
-4,ATH-03,Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres,http://www.example.com
-5,ATH-04,viagra nigeria,http://www.example.com
-6,ATH-05,Esto es un text bien redactado,hola
+recordIndex,author,text,info,xxxCreationDate,xxxMoment,xxxMoney,flag
+0,,Text 1,http://www.example.com,aaa-2021/06/09,2021/06/01 19:39,EUR 1.00,true
+1,Alex,Text 2,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+2,Alejandro Manuel Perez Arjona,nigeria no debería de tragarselo porque son nueve palabras,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+3,ATH-02,,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+4,ATH-03,Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres Texto superior a 150 carácteres,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+5,ATH-04,viagra nigeria,http://www.example.com,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+6,ATH-05,Esto es un text bien redactado,hola,aab-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+7,ATH-06,texto,,aab-2015/03/12,2021/06/01 19:39,EUR 150.00,true
+8,ATH-07,texto,,a12-2021/06/09,2021/06/01 19:39,EUR 150.00,true
+9,ATH-08,texto,,aaa-2021/06/09,2021/06/01 19:39,USD 10.00,false
+10,ATH-08,texto,,aaa-2021/06/09,2021/06/01 19:39,EUR -10.00,false

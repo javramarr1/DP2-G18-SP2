@@ -1,4 +1,3 @@
-
 package acme.features.anonymous.shout;
 
 import java.util.Collection;
@@ -12,9 +11,10 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousShoutRepository  extends AbstractRepository  {
 	
-
-	
 	@Query("select s from Shout s")
 	Collection<Shout> findMany();
+	
+	@Query("SELECT count(s) FROM Shout s WHERE s.xxx.creationDate =?1")
+	Integer numberOfShoutsByCreationDate(String date);
 
 }

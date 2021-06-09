@@ -20,4 +20,15 @@ administrator.dashboard.form.label.num-executions = Media, desviación, mínimo 
 administrator.dashboard.form.label.num-workloads = Media, desviación, mínimo y máximo de carga de trabajo
 administrator.dashboard.form.label.dias = (Medido en días)
 
+#Dashboard XXX
+
+administrator.dashboard.form.label.ratioShoutFalse = Ratio de gritos falsos
+administrator.dashboard.form.label.ratioShoutTrue = Ratio de gritos verdaderos
+
+administrator.dashboard.form.label.ratioYear= Ratio year
+
+administrator.dashboard.form.label.averageBTC = Media USD
+administrator.dashboard.form.label.averageEUR = Media EUR
+administrator.dashboard.form.label.deviationBTC = Desviación USD
+administrator.dashboard.form.label.deviationEUR = Desviación EUR
 

@@ -1,0 +1,6 @@
+timestamp,test-class,test-method,time,description,result
+2021-06-08 22:43:29.272,acme.testing.anonymous.shout.AnonymousListTest,listAll,2402,"[1] recordIndex=0, moment=2021/05/31 19:30, author=Jhon Doe, text=I'm happy!, info=null",OK
+2021-06-08 22:43:31.328,acme.testing.anonymous.shout.AnonymousListTest,listAll,1734,"[2] recordIndex=1, moment=2021/05/31 12:55, author=Francisco, text=I'm sad!, info=http://www.realmadrid.com",OK
+2021-06-08 22:43:33.459,acme.testing.anonymous.shout.AnonymousListTest,listAll,1834,"[3] recordIndex=2, moment=2021/05/31 01:30, author=Javier, text=I love github!, info=http://github.com",OK
+2021-06-08 22:43:35.546,acme.testing.anonymous.shout.AnonymousListTest,listAll,1764,"[4] recordIndex=3, moment=2021/06/01 12:55, author=Fernando, text=Good work as a team!, info=https://www.google.com",OK
+2021-06-08 22:43:37.605,acme.testing.anonymous.shout.AnonymousListTest,listAll,1780,"[5] recordIndex=4, moment=2021/06/01 12:55, author=Manuel, text=We have a reunion today, info=https://discord.com",OK

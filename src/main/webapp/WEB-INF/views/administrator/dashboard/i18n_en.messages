@@ -20,4 +20,14 @@ administrator.dashboard.form.label.num-executions = Average, deviation, minimum 
 administrator.dashboard.form.label.num-workloads = Average, deviation, minimum and maximum task workloads
 administrator.dashboard.form.label.dias = (Measured in days)
 
+#Dashboard XXX
+
+administrator.dashboard.form.label.ratioShoutTrue = Ratio shout that are true
+
+administrator.dashboard.form.label.ratioYear= Ratio year
+
+administrator.dashboard.form.label.averageBTC = Average USD
+administrator.dashboard.form.label.averageEUR = Average EUR
+administrator.dashboard.form.label.deviationBTC = Deviation USD
+administrator.dashboard.form.label.deviationEUR = Deviation EUR
 

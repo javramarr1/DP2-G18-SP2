@@ -1,6 +1,4 @@
 recordIndex,title,description,start_date,end_date,workload,op_link,is_private
-0,Texample_nuevo,This is a description,2030/09/07 00:00,2030/09/08 12:00,0.45,http://1happybirthday.com,true
-0,Texample_nuevo,N,2030/09/07 00:00,2030/09/08 12:00,0.45,http://1happybirthday.com,true
-0,Texample_nuevo,N,2030/09/07 00:00,2030/09/08 12:00,0.45,,false
+0,Texample_nuevo,N,2030/09/07 00:00,2030/09/08 12:00,0.01,http://nuevaurl.com,false
 0,Texample_nuevo,N,2031/10/08 12:00,2031/10/08 12:01,0.01,,false
 0,viagra aqui hay diez diez palabras palabras palabras palabras palabras,N,2031/10/08 12:00,2031/10/08 12:01,0.01,,false

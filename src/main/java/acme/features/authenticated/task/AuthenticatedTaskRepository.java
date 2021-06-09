@@ -16,7 +16,7 @@ public interface AuthenticatedTaskRepository extends AbstractRepository{
 	@Query("select t from Task t where t.id = ?1")
 	Task findOneTaskById(int id);
 
-	@Query("select t from Task t where t.end_date < ?1 order by t.workload ")
-	Collection<Task> findFinishedTask(Date time);
+	@Query("select t from Task t where t.is_private = 0 and t.end_date < ?1 order by t.workload ")
+	Collection<Task> findFinishedAndPublicTask(Date time);
 
 }
